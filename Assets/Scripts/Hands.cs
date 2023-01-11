@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Hands : MonoBehaviour
@@ -7,8 +8,10 @@ public class Hands : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     public Transform parent;
+    // public Transform theTable;
     private bool hasItem;
     [SerializeField] private LayerMask foodLayer;
+    // [SerializeField] private LayerMask tableLayer;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,6 +22,7 @@ public class Hands : MonoBehaviour
     void Update()
     {
         AdoptionAndAbandonment();
+        // CustomerSatisfaction();
     }
     
     public void AdoptionAndAbandonment()
@@ -40,18 +44,19 @@ public class Hands : MonoBehaviour
     
     private void PickingFoodUp()
     {
-        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.2f, foodLayer);
+        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.5f, foodLayer);
         
         foreach (var f  in food)
         {
-            f.gameObject.transform.SetParent(parent);
+            f.gameObject.transform.SetParent(parent); 
+            f.transform.position = parent.position;
             return;
         }
     }
     
     public void DropFood()
     {
-        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.2f, foodLayer);
+        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.5f, foodLayer);
 
         foreach (var f in food)
         {
@@ -59,10 +64,41 @@ public class Hands : MonoBehaviour
             return;
         }
     }
+
+    #region TablePlacment
+
     
-    // private void OnDrawGizmos()
+
+    
+    // private void CustomerSatisfaction()
     // {
-    //     Gizmos.color = Color.red;
-    //     Gizmos.DrawWireSphere(transform.position, 0.2f);
+    //     if (Input.GetKey("q"))
+    //     {
+    //         if (hasItem == true)
+    //         {
+    //             PlaceOnTable();
+    //             hasItem = false;
+    //         }
+    //     }
     // }
+    //
+    // private void PlaceOnTable()
+    // {
+    //     Collider2D[] table = Physics2D.OverlapCircleAll(transform.position, 0.5f, tableLayer);
+    //
+    //     foreach (var t in table)
+    //     {
+    //         t.gameObject.transform.SetParent(theTable);
+    //         t.transform.position = parent.position;
+    //         return;
+    //     }
+    // }
+    
+    #endregion
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 0.5f);
+    }
 }
