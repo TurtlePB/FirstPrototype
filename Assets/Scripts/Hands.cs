@@ -40,7 +40,7 @@ public class Hands : MonoBehaviour
     
     private void PickingFoodUp()
     {
-        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.3f, foodLayer);
+        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.2f, foodLayer);
         
         foreach (var f  in food)
         {
@@ -51,7 +51,7 @@ public class Hands : MonoBehaviour
     
     public void DropFood()
     {
-        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.3f, foodLayer);
+        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.2f, foodLayer);
 
         foreach (var f in food)
         {
@@ -60,9 +60,9 @@ public class Hands : MonoBehaviour
         }
     }
     
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 0.3f);
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(transform.position, 0.2f);
+    // }
 }
