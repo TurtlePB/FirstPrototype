@@ -11,7 +11,8 @@ public class Hands : MonoBehaviour
 {
     // private int itemCount;
     // [SerializeField] TextMeshProUGUI itemCountText;
-    
+    public Spawner _foodSpawner;
+
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     public Transform parent;
@@ -19,10 +20,12 @@ public class Hands : MonoBehaviour
     private bool hasItem;
     [SerializeField] private LayerMask foodLayer;
     // [SerializeField] private LayerMask tableLayer;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
+        _foodSpawner = FindObjectOfType<Spawner>();
         // itemCountText = GetComponent<TextMeshProUGUI>();
         // itemCount = 0;
         hasItem = false;
@@ -61,10 +64,12 @@ public class Hands : MonoBehaviour
             f.gameObject.transform.SetParent(parent); 
             f.transform.position = parent.position;
             // itemCount++;
+            _foodSpawner.existingBurger = 0;
+            _foodSpawner.existingSoda = 0;
             return;
         }
     }
-    
+
     public void DropFood()
     {
         Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.5f, foodLayer);
