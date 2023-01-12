@@ -9,7 +9,7 @@ public class Table : MonoBehaviour
     private BoxCollider2D bc;
     public Transform theTable;
     private bool hasItem;
-    [SerializeField] private LayerMask tableLayer;
+    [SerializeField] private LayerMask foodLayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class Table : MonoBehaviour
     
     private void CustomerSatisfaction()
     {
-        if (Input.GetKey("q"))
+        if (Input.GetKey("e"))
         {
             if (hasItem == true)
             {
@@ -35,12 +35,12 @@ public class Table : MonoBehaviour
     
     private void PlaceOnTable()
     {
-        Collider2D[] table = Physics2D.OverlapCircleAll(transform.position, 1.5f, tableLayer);
+        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.25f, foodLayer);
 
-        foreach (var t in table)
+        foreach (var f in food)
         {
-            t.gameObject.transform.SetParent(theTable);
-            t.transform.position = theTable.position;
+            f.gameObject.transform.SetParent(theTable);
+            f.transform.position = theTable.position;
             return;
         }
     }
@@ -48,6 +48,6 @@ public class Table : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, 1.5f);
+        Gizmos.DrawWireSphere(transform.position, 1.25f);
     }
 }

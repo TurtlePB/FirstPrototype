@@ -66,9 +66,6 @@ public class Hands : MonoBehaviour
     }
 
     #region TablePlacment
-
-    
-
     
     // private void CustomerSatisfaction()
     // {
