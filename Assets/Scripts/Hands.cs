@@ -1,10 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hands : MonoBehaviour
 {
+    // private int itemCount;
+    // [SerializeField] TextMeshProUGUI itemCountText;
+    
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     public Transform parent;
@@ -16,6 +23,8 @@ public class Hands : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
+        // itemCountText = GetComponent<TextMeshProUGUI>();
+        // itemCount = 0;
         hasItem = false;
     }
     
@@ -23,6 +32,7 @@ public class Hands : MonoBehaviour
     {
         AdoptionAndAbandonment();
         // CustomerSatisfaction();
+        // itemCountText.text = "Items:" + itemCount;
     }
     
     public void AdoptionAndAbandonment()
@@ -50,6 +60,7 @@ public class Hands : MonoBehaviour
         {
             f.gameObject.transform.SetParent(parent); 
             f.transform.position = parent.position;
+            // itemCount++;
             return;
         }
     }
@@ -61,6 +72,7 @@ public class Hands : MonoBehaviour
         foreach (var f in food)
         {
             f.gameObject.transform.parent = null;
+            // itemCount--;
             return;
         }
     }

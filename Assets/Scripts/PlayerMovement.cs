@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
@@ -33,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position.y + (vertical * speed * Time.deltaTime));
         
         rb.velocity = Vector2.right * (horizontal * speed);
-        
+
         // AdoptionAndAbandonment();
     }
 
