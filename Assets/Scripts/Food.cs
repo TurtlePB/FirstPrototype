@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Burger : MonoBehaviour
+public class Food : MonoBehaviour
 {
     private Spawner _spawner;
-    
-    public void SetSpawner(Spawner burgerSpawner)
+
+    public void SetSpawner(Spawner foodSpawner)
     {
-        _spawner = burgerSpawner;
+        _spawner = foodSpawner;
     }
 }
-

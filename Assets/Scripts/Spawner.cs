@@ -25,22 +25,37 @@ public class Spawner : MonoBehaviour
 
     private void SpawnFood()
     {
+        
+        
+        
         if (existingBurger == 0)
         {
             GameObject newBurger = Instantiate(Burger, SpawnpointBurger.position, Quaternion.identity); 
-
+        
             newBurger.GetComponent<Burger>().SetSpawner(this);
             newBurger.transform.SetParent(transform);
             existingBurger = 1;
         }
-
+        
         if (existingSoda == 0)
         {
             GameObject newSoda = Instantiate(Soda, SpawnpointSoda.position, quaternion.identity);
-
+        
                 newSoda.GetComponent<Soda>().SetSpawner(this);
                 newSoda.transform.SetParent(transform);
                 existingSoda = 1;
         }
     }
+
+    // public void SpawnAllKindOfFood()
+    // {
+    //     GameObject newFood1 = Instantiate(Burger, SpawnpointBurger.position, quaternion.identity);
+    //     GameObject newFood2 = Instantiate(Soda, SpawnpointSoda.position, quaternion.identity);
+    //     
+    //     GetComponent<Food>().SetSpawner(this);
+    //     
+    //     newFood1.transform.SetParent(transform);
+    //     newFood2.transform.SetParent(transform);
+    //     
+    // }
 }

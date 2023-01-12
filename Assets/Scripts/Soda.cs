@@ -11,13 +11,3 @@ public class Soda : MonoBehaviour
          _spawner = foodSpawner;
      }
 }
-
-// public partial class Food : MonoBehaviour
-// {
-//     private Spawner _spawner;
-//
-//     public void SetSpawner(Spawner foodSpawner)
-//     {
-//         _spawner = foodSpawner;
-//     }
-// }
