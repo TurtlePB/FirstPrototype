@@ -41,6 +41,7 @@ public class Table : MonoBehaviour
         {
             f.gameObject.transform.SetParent(theTable);
             f.transform.position = theTable.position;
+            // f.transform.localPosition.z = theTable;
             return;
         }
     }
