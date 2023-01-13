@@ -9,33 +9,25 @@ using UnityEngine.UI;
 
 public class Hands : MonoBehaviour
 {
-    // private int itemCount;
-    // [SerializeField] TextMeshProUGUI itemCountText;
-    public Spawner _foodSpawner;
+    private Spawner _foodSpawner;
 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     public Transform parent;
-    // public Transform theTable;
     private bool hasItem;
     [SerializeField] private LayerMask foodLayer;
-    // [SerializeField] private LayerMask tableLayer;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         _foodSpawner = FindObjectOfType<Spawner>();
-        // itemCountText = GetComponent<TextMeshProUGUI>();
-        // itemCount = 0;
         hasItem = false;
     }
     
     void Update()
     {
         AdoptionAndAbandonment();
-        // CustomerSatisfaction();
-        // itemCountText.text = "Items:" + itemCount;
     }
     
     public void AdoptionAndAbandonment()
@@ -63,7 +55,6 @@ public class Hands : MonoBehaviour
         {
             f.gameObject.transform.SetParent(parent); 
             f.transform.position = parent.position;
-            // itemCount++;
             _foodSpawner.existingBurger = 0;
             _foodSpawner.existingSoda = 0;
             return;
@@ -77,7 +68,6 @@ public class Hands : MonoBehaviour
         foreach (var f in food)
         {
             f.gameObject.transform.parent = null;
-            // itemCount--;
             return;
         }
     }
