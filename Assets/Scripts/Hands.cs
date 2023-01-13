@@ -55,8 +55,9 @@ public class Hands : MonoBehaviour
         {
             f.gameObject.transform.SetParent(parent); 
             f.transform.position = parent.position;
-            _foodSpawner.existingBurger = 0;
-            _foodSpawner.existingSoda = 0;
+            _foodSpawner.existingBurger = false;
+            _foodSpawner.existingSoda = false;
+            _foodSpawner.existingPommes = false;
             return;
         }
     }

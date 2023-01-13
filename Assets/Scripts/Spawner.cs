@@ -7,15 +7,19 @@ public class Spawner : MonoBehaviour
 {
     public GameObject Burger;
     public GameObject Soda;
-    public int existingBurger;
-    public int existingSoda;
+    public GameObject Pommes;
+    public bool existingBurger;
+    public bool existingSoda;
+    public bool existingPommes;
     public Transform SpawnpointBurger;
     public Transform SpawnpointSoda;
+    public Transform SpawnpointPommes;
     
     void Start()
     {
-        existingBurger = 0;
-        existingSoda = 0;
+        existingBurger = false;
+        existingSoda = false;
+        existingPommes = false;
     }
     
     void Update()
@@ -28,22 +32,31 @@ public class Spawner : MonoBehaviour
         
         
         
-        if (existingBurger == 0)
+        if (existingBurger == false)
         {
             GameObject newBurger = Instantiate(Burger, SpawnpointBurger.position, Quaternion.identity); 
         
             newBurger.GetComponent<Burger>().SetSpawner(this);
             newBurger.transform.SetParent(transform);
-            existingBurger = 1;
+            existingBurger = true;
         }
         
-        if (existingSoda == 0)
+        if (existingSoda == false)
         {
             GameObject newSoda = Instantiate(Soda, SpawnpointSoda.position, quaternion.identity);
         
                 newSoda.GetComponent<Soda>().SetSpawner(this);
                 newSoda.transform.SetParent(transform);
-                existingSoda = 1;
+                existingSoda = true;
+        }
+
+        if (existingPommes == false)
+        {
+            GameObject newPommes = Instantiate(Pommes, SpawnpointPommes.position, quaternion.identity);
+
+            newPommes.GetComponent<Pommes>().SetSpawner(this);
+            newPommes.transform.SetParent(transform);
+            existingPommes = true;
         }
     }
 

@@ -6,8 +6,8 @@ public class Soda : MonoBehaviour
 {
     private Spawner _spawner;
 
-     public void SetSpawner(Spawner foodSpawner)
+     public void SetSpawner(Spawner SodaSpawner)
      {
-         _spawner = foodSpawner;
+         _spawner = SodaSpawner;
      }
 }
