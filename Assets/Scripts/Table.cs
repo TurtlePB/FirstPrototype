@@ -24,7 +24,7 @@ public class Table : MonoBehaviour
     
     private void CustomerSatisfaction()
     {
-        if (Input.GetKey("e"))
+        if (Input.GetKeyDown("e"))
         {
             if (hasItem == true)
             {
@@ -35,7 +35,7 @@ public class Table : MonoBehaviour
     
     private void PlaceOnTable()
     {
-        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.25f, foodLayer);
+        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1f, foodLayer);
 
         foreach (var f in food)
         {
@@ -48,6 +48,6 @@ public class Table : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, 1.25f);
+        Gizmos.DrawWireSphere(transform.position, 1f);
     }
 }
