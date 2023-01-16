@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Table : MonoBehaviour
 {
+    private NPCMovement npc;
+    
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     public Transform theTable;
@@ -14,6 +16,7 @@ public class Table : MonoBehaviour
     void Start()
     {
         hasItem = true;
+        npc.checkIfTableIsFree = true;
     }
 
     // Update is called once per frame
