@@ -24,6 +24,11 @@ public class NPCMovement : MonoBehaviour
         currentIndexOfWaypoint = 0;
         currentIndexOfSprites = 0;
         isSitting = false;
+        
+        if (sr)
+        {
+            sr.sprite = listOfSprites[Random.Range(0, listOfSprites.Count)];
+        }
     }
     
     void Update()
@@ -33,28 +38,19 @@ public class NPCMovement : MonoBehaviour
 
     void TableSearch()
     {
-        // int index = new Random().Next(listOfSprites.Count);
-        // print(index);
-        // gameObject.transform.
-        
-        if (sr)
-        {
-            sr.sprite = listOfSprites[Random.Range(0, listOfSprites.Count)];
-        }
-        
         if (isSitting == true) return;
         
         if (Vector3.Distance(transform.position, listOfWaypoints[currentIndexOfWaypoint].position) < 0.001f)
         {
             currentIndexOfWaypoint++;
         
-            if (currentIndexOfWaypoint > listOfWaypoints.Count)
-            {
-                currentIndexOfWaypoint = 0;
-            }
+            // if (currentIndexOfWaypoint > listOfWaypoints.Count )
+            // {
+            //     currentIndexOfWaypoint = 0;
+            // }
         }
 
-        if (transform.position != listOfWaypoints[2].position)
+        if (currentIndexOfWaypoint < listOfWaypoints.Count)
         {
             var move = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, listOfWaypoints[currentIndexOfWaypoint].position, move);
