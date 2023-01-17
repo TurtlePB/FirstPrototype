@@ -23,14 +23,13 @@ public class Table : MonoBehaviour
         hasItem = true;
         itemIsPlaced = false;
         isWishing = false;
-        // npc.checkIfTableIsFree = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         CustomerSatisfaction();
-        FoodWishAttempt1();
+        // FoodWishAttempt1();
     }
     
     private void CustomerSatisfaction()
