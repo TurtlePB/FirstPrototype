@@ -8,22 +8,19 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 7.5f;
+    public float speed = 0.5f;
+    private Vector3 pos;
 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private float horizontal;
     private float vertical;
-    public Transform parent;
-    private bool hasItem;
-    private int f;
-    [SerializeField] private LayerMask foodLayer;
 
     private void Awake()
     {
+        pos = transform.position;
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
-        hasItem = false;
     }
     
     private void Update()
@@ -35,56 +32,32 @@ public class PlayerMovement : MonoBehaviour
             transform.position.y + (vertical * speed * Time.deltaTime));
         
         rb.velocity = Vector2.right * (horizontal * speed);
-
-        // AdoptionAndAbandonment();
-    }
-
-    #region FoodTransportation
-    
-    private void PickingFoodUp()
-    {
-        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.5f, foodLayer);
         
-        foreach (var f  in food)
-        {
-            f.gameObject.transform.SetParent(parent);
-            return;
-        }
+        // PokemonMovement();
     }
+
+    private void PokemonMovement()
+    {
+        if (Input.GetKey("w") && transform.position == pos)
+        {
+                pos += Vector3.up;
+        }
+        
+        if (Input.GetKey("a") && transform.position == pos)
+        {
+                pos += Vector3.left;
+        }
+        
+        if (Input.GetKey("s") && transform.position == pos)
+        {
+            pos += Vector3.down;
+        }
+        
+        if (Input.GetKey("d") && transform.position == pos)
+        {
+            pos += Vector3.right;
+        }
     
-    public void AdoptionAndAbandonment()
-    {
-        if (Input.GetKeyDown("e"))
-        {
-            if (hasItem == false)
-            {
-                PickingFoodUp();
-                hasItem = true;
-            }
-            else
-            {
-                DropFood();
-                hasItem = false;
-            }
-        }
+        transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
     }
-
-    public void DropFood()
-    {
-        Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1f, foodLayer);
-
-        foreach (var f in food)
-        {
-            f.gameObject.transform.parent = null;
-            return;
-        }
-    }
-
-    // private void OnDrawGizmos()
-    // {
-    //     Gizmos.color = Color.red;
-    //     Gizmos.DrawWireSphere(transform.position, 1f);
-    // }
-    #endregion
-    //Currently in Hands Script!!!
 }
