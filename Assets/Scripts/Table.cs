@@ -14,7 +14,7 @@ public class Table : MonoBehaviour
     private bool hasItem;
     public bool itemIsPlaced;
     [SerializeField] private LayerMask foodLayer;
-    private NPCMovement _npcMovement;
+    public NPCMovement _npcMovement;
     private bool isWishing;
     // Start is called before the first frame update
     void Start()

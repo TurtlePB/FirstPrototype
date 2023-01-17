@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FoodManager : MonoBehaviour
 {
-    // public List<ArrayList> food;
+    // public List<object> food;
+    // private 
     void Start()
     {
         
