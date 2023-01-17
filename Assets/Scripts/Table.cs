@@ -1,19 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Table : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D bc;
+    private SpriteRenderer sr;
     public Transform theTable;
     private bool hasItem;
+    public bool itemIsPlaced;
     [SerializeField] private LayerMask foodLayer;
+    public NPCMovement _npcMovement;
+    private bool isWishing;
     // Start is called before the first frame update
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         hasItem = true;
+        itemIsPlaced = false;
+        isWishing = false;
         // npc.checkIfTableIsFree = true;
     }
 
@@ -30,6 +39,7 @@ public class Table : MonoBehaviour
             if (hasItem == true)
             {
                 PlaceOnTable();
+                itemIsPlaced = true;
             }
         }
     }
@@ -50,5 +60,36 @@ public class Table : MonoBehaviour
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, 1.1f);
+    }
+    
+    private void FoodWish()
+    {
+        if (_npcMovement.isSitting == true)
+        {
+            if (isWishing == false)
+            {
+                sr.sprite = _npcMovement.listOfFoodWishes[Random.Range(0, _npcMovement.listOfFoodWishes.Count)];
+                isWishing = true;
+            }
+
+            if (sr.sprite == _npcMovement.listOfFoodWishes[0] && itemIsPlaced == true)
+            {
+                Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
+
+                if (CompareTag("Burger"))
+                {
+                    foreach (var burger in food)
+                    {
+                        burger.gameObject.SetActive(false);
+                        print("yummy");
+                    }
+                }
+            }
+
+            if (sr.sprite == _npcMovement.listOfFoodWishes[1])
+            {
+                
+            }
+        }
     }
 }

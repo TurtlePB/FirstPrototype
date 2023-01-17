@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-// using Random = System.Random;
 using Random = UnityEngine.Random;
 
 public class NPCMovement : MonoBehaviour
@@ -13,18 +12,19 @@ public class NPCMovement : MonoBehaviour
     public List<Transform> listOfWaypoints;
     private SpriteRenderer sr;
     public List<Sprite> listOfSprites;
+    public List<Sprite> listOfFoodWishes;
     // [SerializeField] private Transform Chair;
     private int currentIndexOfWaypoint;
-    private int currentIndexOfSprites;
-    private bool isSitting;
+    // private int currentIndexOfSprites;
+    public bool isSitting;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         currentIndexOfWaypoint = 0;
-        currentIndexOfSprites = 0;
+        // currentIndexOfSprites = 0;
         isSitting = false;
-        
+
         if (sr)
         {
             sr.sprite = listOfSprites[Random.Range(0, listOfSprites.Count)];
@@ -61,5 +61,4 @@ public class NPCMovement : MonoBehaviour
         }
         
     }
-    
 }
