@@ -14,7 +14,7 @@ public class Table : MonoBehaviour
     private bool hasItem;
     public bool itemIsPlaced;
     [SerializeField] private LayerMask foodLayer;
-    public NPCMovement _npcMovement;
+    private NPCMovement _npcMovement;
     private bool isWishing;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,7 @@ public class Table : MonoBehaviour
     void Update()
     {
         CustomerSatisfaction();
+        FoodWishAttempt1();
     }
     
     private void CustomerSatisfaction()
@@ -62,7 +63,7 @@ public class Table : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, 1.1f);
     }
     
-    private void FoodWish()
+    private void FoodWishAttempt1()
     {
         if (_npcMovement.isSitting == true)
         {
@@ -76,9 +77,9 @@ public class Table : MonoBehaviour
             {
                 Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
 
-                if (CompareTag("Burger"))
+                foreach (var burger in food)
                 {
-                    foreach (var burger in food)
+                    if (CompareTag("Burger"))
                     {
                         burger.gameObject.SetActive(false);
                         print("yummy");
@@ -86,9 +87,18 @@ public class Table : MonoBehaviour
                 }
             }
 
-            if (sr.sprite == _npcMovement.listOfFoodWishes[1])
+            if (sr.sprite == _npcMovement.listOfFoodWishes[1] && itemIsPlaced == true)
             {
-                
+                Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
+
+                foreach (var soda in food)
+                {
+                    if (CompareTag("Soda"))
+                    {
+                        soda.gameObject.SetActive(false);
+                        print("juicy");
+                    }
+                } 
             }
         }
     }
