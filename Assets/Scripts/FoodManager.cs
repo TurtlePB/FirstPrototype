@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class FoodManager : MonoBehaviour
 {
-    // public List<object> food;
-    // private 
+    public int numSelectors = 5;
+    public GameObject[] selectorArr;
+    public GameObject selector; //selected in the editor
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        selectorArr = new GameObject[numSelectors];
+        for (int i = 0; i < numSelectors; i++)
+        {
+            GameObject go = Instantiate(selector, new Vector3((float)i, 1, 0), Quaternion.identity) as GameObject;
+            go.transform.localScale = Vector3.one;
+            selectorArr[i] = go;
+        }
     }
 }
