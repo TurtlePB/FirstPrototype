@@ -10,7 +10,7 @@ public class NPCMovement : MonoBehaviour
     // private BoxCollider2D bc;
     public float speed = 1f;
     public List<Transform> listOfWaypoints;
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
     public List<Sprite> listOfSprites;
     public List<Sprite> listOfFoodWishes;
     // [SerializeField] private Transform Chair;
