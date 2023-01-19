@@ -36,7 +36,7 @@ public class Table : MonoBehaviour
     void Update()
     {
         CustomerSatisfaction();
-        // FoodWishAttempt1();
+        FoodWishAttempt1();
     }
     
     private void CustomerSatisfaction()
@@ -75,48 +75,19 @@ public class Table : MonoBehaviour
         {
             if (isWishing == false)
             {
-                _FoodItem = ListOfFoodStuff[Random.Range(0, ListOfFoodStuff.Count)];
+                // _FoodItem = ListOfFoodStuff[Random.Range(0, ListOfFoodStuff.Count)];
                 //könnte man ausprobieren
                 // foodID = _npcMovement.listOfFoodWishes[Random.Range(0,_npcMovement.listOfFoodWishes.Count)];
                 //Fehler ist kein Sprite sondern int
-                // _npcMovement.sr.sprite = _npcMovement.listOfFoodWishes[Random.Range(0, _npcMovement.listOfFoodWishes.Count)];
+                _npcMovement.sr.sprite = _npcMovement.listOfFoodWishes[Random.Range(0, _npcMovement.listOfFoodWishes.Count)];
                 //Fehler der NPC sprite würde dann geändert werden
                 isWishing = true;
             }
 
-            // if (_npcMovement.sr.sprite == _npcMovement.listOfFoodWishes[0] && itemIsPlaced == true)
-            // {
-            //     Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
-            //
-            //     foreach (var burger in food)
-            //     {
-            //         if (CompareTag("Burger"))
-            //         {
-            //             burger.gameObject.SetActive(false);
-            //             print("yummy");
-            //         }
-            //     }
-            // }
-
-            // if (_npcMovement.sr.sprite == _npcMovement.listOfFoodWishes[1] && itemIsPlaced == true)
-            // {
-            //     Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
-            //
-            //     foreach (var soda in food)
-            //     {
-            //         if (CompareTag("Soda"))
-            //         {
-            //             soda.gameObject.SetActive(false);
-            //             print("juicy");
-            //         }
-            //     } 
-            // }
-            
-            if (_FoodItem == ListOfFoodStuff[0] && itemIsPlaced == true)
+            if (_npcMovement.sr.sprite == _npcMovement.listOfFoodWishes[0] && itemIsPlaced == true)
             {
-                print("i want a burger");
                 Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
-                
+            
                 foreach (var burger in food)
                 {
                     if (CompareTag("Burger"))
@@ -125,8 +96,37 @@ public class Table : MonoBehaviour
                         print("yummy");
                     }
                 }
-                
             }
+
+            if (_npcMovement.sr.sprite == _npcMovement.listOfFoodWishes[1] && itemIsPlaced == true)
+            {
+                Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
+            
+                foreach (var soda in food)
+                {
+                    if (CompareTag("Soda"))
+                    {
+                        soda.gameObject.SetActive(false);
+                        print("juicy");
+                    }
+                } 
+            }
+            
+            // if (_FoodItem == ListOfFoodStuff[0] && itemIsPlaced == true)
+            // {
+            //     print("i want a burger");
+            //     Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
+            //     
+            //     foreach (var burger in food)
+            //     {
+            //         if (CompareTag("Burger"))
+            //         {
+            //             burger.gameObject.SetActive(false);
+            //             print("yummy");
+            //         }
+            //     }
+            //     
+            // }
 
             // if (_FoodItem == ListOfFoodStuff[1] && itemIsPlaced == true)
             // {
