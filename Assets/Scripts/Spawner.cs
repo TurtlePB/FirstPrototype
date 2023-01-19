@@ -29,9 +29,6 @@ public class Spawner : MonoBehaviour
 
     private void SpawnFood()
     {
-        
-        
-        
         if (existingBurger == false)
         {
             GameObject newBurger = Instantiate(Burger, SpawnpointBurger.position, Quaternion.identity); 

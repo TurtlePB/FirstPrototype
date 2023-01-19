@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 0.5f;
+    public float speed = 6f;
     private Vector3 pos;
 
     private Rigidbody2D rb;
@@ -59,5 +59,6 @@ public class PlayerMovement : MonoBehaviour
         }
     
         transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
+        rb.velocity = Vector2.right * (horizontal * speed);
     }
 }
