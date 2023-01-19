@@ -36,7 +36,7 @@ public class Table : MonoBehaviour
     void Update()
     {
         CustomerSatisfaction();
-        FoodWishAttempt1();
+        // FoodWishAttempt1();
     }
     
     private void CustomerSatisfaction()
@@ -46,7 +46,6 @@ public class Table : MonoBehaviour
             if (hasItem == true)
             {
                 PlaceOnTable();
-                itemIsPlaced = true;
             }
         }
     }
@@ -59,6 +58,7 @@ public class Table : MonoBehaviour
         {
             f.gameObject.transform.SetParent(theTable);
             f.transform.position = theTable.position;
+            itemIsPlaced = true;
             return;
         }
     }
@@ -75,30 +75,16 @@ public class Table : MonoBehaviour
         {
             if (isWishing == false)
             {
-                // _FoodItem = ListOfFoodStuff[Random.Range(0, ListOfFoodStuff.Count)];
+                _FoodItem = ListOfFoodStuff[Random.Range(0, ListOfFoodStuff.Count)];
                 //könnte man ausprobieren
                 // foodID = _npcMovement.listOfFoodWishes[Random.Range(0,_npcMovement.listOfFoodWishes.Count)];
                 //Fehler ist kein Sprite sondern int
-                _npcMovement.sr.sprite = _npcMovement.listOfFoodWishes[Random.Range(0, _npcMovement.listOfFoodWishes.Count)];
+                // _npcMovement.sr.sprite = _npcMovement.listOfFoodWishes[Random.Range(0, _npcMovement.listOfFoodWishes.Count)];
                 //Fehler der NPC sprite würde dann geändert werden
                 isWishing = true;
             }
 
-            if (_npcMovement.sr.sprite == _npcMovement.listOfFoodWishes[0] && itemIsPlaced == true)
-            {
-                Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
-            
-                foreach (var burger in food)
-                {
-                    if (CompareTag("Burger"))
-                    {
-                        burger.gameObject.SetActive(false);
-                        print("yummy");
-                    }
-                }
-            }
-
-            // if (_FoodItem == ListOfFoodStuff[0] && itemIsPlaced == true)
+            // if (_npcMovement.sr.sprite == _npcMovement.listOfFoodWishes[0] && itemIsPlaced == true)
             // {
             //     Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
             //
@@ -112,36 +98,120 @@ public class Table : MonoBehaviour
             //     }
             // }
 
-            if (_npcMovement.sr.sprite == _npcMovement.listOfFoodWishes[1] && itemIsPlaced == true)
+            // if (_npcMovement.sr.sprite == _npcMovement.listOfFoodWishes[1] && itemIsPlaced == true)
+            // {
+            //     Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
+            //
+            //     foreach (var soda in food)
+            //     {
+            //         if (CompareTag("Soda"))
+            //         {
+            //             soda.gameObject.SetActive(false);
+            //             print("juicy");
+            //         }
+            //     } 
+            // }
+            
+            if (_FoodItem == ListOfFoodStuff[0] && itemIsPlaced == true)
             {
+                print("i want a burger");
                 Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
-
-                foreach (var soda in food)
+                
+                foreach (var burger in food)
                 {
-                    if (CompareTag("Soda"))
+                    if (CompareTag("Burger"))
                     {
-                        soda.gameObject.SetActive(false);
-                        print("juicy");
+                        burger.gameObject.SetActive(false);
+                        print("yummy");
                     }
-                } 
+                }
+                
             }
+
+            // if (_FoodItem == ListOfFoodStuff[1] && itemIsPlaced == true)
+            // {
+            //     print("Pommes");
+            //     
+            //     // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
+            //     //
+            //     // foreach (var pommes in food)
+            //     // {
+            //     //     if (CompareTag("Pommes"))
+            //     //     {
+            //     //         pommes.gameObject.SetActive(false);
+            //     //         print("crunchy");
+            //     //     }
+            //     // }
+            //
+            //     if (CompareTag("Pommes"))
+            //     {
+            //         print("yummy crunchy pommes");
+            //     }
+            // }
+
+            // if (_FoodItem == ListOfFoodStuff[2] && itemIsPlaced == true)
+            // {
+            //     print("Soda");
+            //     
+            //     // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
+            //     //
+            //     // foreach (var soda in food)
+            //     // {
+            //     //     if (CompareTag("Soda"))
+            //     //     {
+            //     //         soda.gameObject.SetActive(false);
+            //     //         print("yummy");
+            //     //     }
+            //     // }
+            //
+            //     if (CompareTag("Soda"))
+            //     {
+            //         print("what a juicy & energising Soda");
+            //     }
+            // }
         }
     }
 
-    // private void FoodWishAttempt2()
+    // private void OnCollisionEnter2D(Collision2D other)
     // {
-    //     if (_npcMovement.isSitting)
+    //     if (_npcMovement.isSitting == true)
     //     {
     //         if (isWishing == false)
     //         {
-    //             var foodwish = _foodManager.selectorArr[Random.Range(0, _foodManager.selectorArr.Length)];
+    //             _FoodItem = ListOfFoodStuff[Random.Range(0, ListOfFoodStuff.Count)];
+    //             print(_FoodItem);
     //             isWishing = true;
     //         }
     //
-    //         // if ()
-    //         // {
-    //         //     
-    //         // }
+    //         if (_FoodItem == ListOfFoodStuff[0] && itemIsPlaced == true)
+    //         {
+    //             if (other.gameObject.CompareTag("Burger"))
+    //             {
+    //                 print("what a tasty Burger");
+    //             }
+    //         }
+    //     }
+    // }
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (_npcMovement.isSitting == true)
+    //     {
+    //         if (isWishing == false)
+    //         {
+    //             _FoodItem = ListOfFoodStuff[Random.Range(0, ListOfFoodStuff.Count)];
+    //             print(_FoodItem);
+    //             isWishing = true;
+    //         }
+    //
+    //         if (_FoodItem == ListOfFoodStuff[0] && itemIsPlaced == true)
+    //         {
+    //             if (other.gameObject.CompareTag("Burger"))
+    //             {
+    //                 print("what a tasty Burger");
+    //                 other.gameObject.SetActive(false);
+    //             }
+    //         }
     //     }
     // }
 }
