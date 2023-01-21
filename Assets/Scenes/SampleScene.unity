@@ -10131,7 +10131,7 @@ MonoBehaviour:
   ListOfFoodStuff:
   - {fileID: 1750768450}
   - {fileID: 1533502055}
-  _npcMovement: {fileID: 1031169896}
+  _npcMovement: {fileID: 1213095683}
 --- !u!50 &1629353989
 Rigidbody2D:
   serializedVersion: 4
@@ -10472,7 +10472,7 @@ MonoBehaviour:
   ListOfFoodStuff:
   - {fileID: 1750768450}
   - {fileID: 1533502055}
-  _npcMovement: {fileID: 667930238}
+  _npcMovement: {fileID: 544972983}
 --- !u!50 &1715731804
 Rigidbody2D:
   serializedVersion: 4
@@ -10605,7 +10605,7 @@ MonoBehaviour:
   ListOfFoodStuff:
   - {fileID: 1750768450}
   - {fileID: 1533502055}
-  _npcMovement: {fileID: 51859802}
+  _npcMovement: {fileID: 851234939}
 --- !u!61 &1748280903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10913,7 +10913,7 @@ MonoBehaviour:
   ListOfFoodStuff:
   - {fileID: 1750768450}
   - {fileID: 1533502055}
-  _npcMovement: {fileID: 2058044709}
+  _npcMovement: {fileID: 164855884}
 --- !u!61 &1887833744
 BoxCollider2D:
   m_ObjectHideFlags: 0

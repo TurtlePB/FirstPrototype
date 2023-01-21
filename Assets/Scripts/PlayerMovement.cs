@@ -25,15 +25,15 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        // horizontal = Input.GetAxis("Horizontal");
+        // vertical = Input.GetAxis("Vertical");
+        //
+        // transform.position = new Vector2(transform.position.x + (horizontal * speed * Time.deltaTime),
+        //     transform.position.y + (vertical * speed * Time.deltaTime));
+        //
+        // rb.velocity = Vector2.right * (horizontal * speed);
         
-        transform.position = new Vector2(transform.position.x + (horizontal * speed * Time.deltaTime),
-            transform.position.y + (vertical * speed * Time.deltaTime));
-        
-        rb.velocity = Vector2.right * (horizontal * speed);
-        
-        // PokemonMovement();
+        PokemonMovement();
     }
 
     private void PokemonMovement()
