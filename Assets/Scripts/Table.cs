@@ -92,6 +92,9 @@ public class Table : MonoBehaviour
                         // newBurgerWish.gameObject.SetActive(false);
                         burger.gameObject.SetActive(false);
                         print("yummy");
+
+                        _npcMovement.foodFinished = true;
+                        _npcMovement.isStillInBuilding = true;
                     }
                 }
                 
@@ -112,6 +115,9 @@ public class Table : MonoBehaviour
                     {
                         soda.gameObject.SetActive(false);
                         print("juicy");
+
+                        _npcMovement.foodFinished = true;
+                        _npcMovement.isStillInBuilding = true;
                     }
                 }
             }

@@ -16,6 +16,8 @@ public class Hands : MonoBehaviour
     public Transform parent;
     private bool hasItem;
     [SerializeField] private LayerMask foodLayer;
+    private float timePressed;
+    [SerializeField] private float CoolDown = 0.75f;
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class Hands : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         _foodSpawner = FindObjectOfType<Spawner>();
         hasItem = false;
+        timePressed = CoolDown;
     }
     
     void Update()
@@ -39,11 +42,23 @@ public class Hands : MonoBehaviour
                 PickingFoodUp();
                 hasItem = true;
             }
-            else
+        }
+
+        if (Input.GetKey("e") && hasItem)
+        {
+            timePressed -= Time.deltaTime;
+            
+            if (timePressed <= 0)
             {
                 DropFood();
                 hasItem = false;
+                timePressed = CoolDown;
             }
+        }
+
+        if (Input.GetKeyUp("e"))
+        {
+            timePressed = CoolDown;
         }
     }
     
