@@ -14,7 +14,7 @@ public class Hands : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     public Transform parent;
-    private bool hasItem;
+    private int maxItems;
     [SerializeField] private LayerMask foodLayer;
     private float timePressed;
     [SerializeField] private float CoolDown = 0.75f;
@@ -24,7 +24,7 @@ public class Hands : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         _foodSpawner = FindObjectOfType<Spawner>();
-        hasItem = false;
+        maxItems = 0;
         timePressed = CoolDown;
     }
     
@@ -37,21 +37,21 @@ public class Hands : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            if (hasItem == false)
+            if (maxItems < 2)
             {
                 PickingFoodUp();
-                hasItem = true;
+                maxItems++;
             }
         }
 
-        if (Input.GetKey("e") && hasItem)
+        if (Input.GetKey("e") && maxItems > 0)
         {
             timePressed -= Time.deltaTime;
             
             if (timePressed <= 0)
             {
                 DropFood();
-                hasItem = false;
+                maxItems--;
                 timePressed = CoolDown;
             }
         }

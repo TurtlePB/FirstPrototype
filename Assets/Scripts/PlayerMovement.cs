@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D bc;
     private float horizontal;
     private float vertical;
+    [Range(0, 1)]
+    public float step = 0.25f;
 
     private void Awake()
     {
@@ -40,25 +42,24 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey("w") && transform.position == pos)
         {
-                pos += Vector3.up;
+                pos += Vector3.up * step;
         }
-        
+            
         if (Input.GetKey("a") && transform.position == pos)
         {
-                pos += Vector3.left;
+                pos += Vector3.left * step;
         }
         
         if (Input.GetKey("s") && transform.position == pos)
         {
-            pos += Vector3.down;
+            pos += Vector3.down * step;
         }
         
         if (Input.GetKey("d") && transform.position == pos)
         {
-            pos += Vector3.right;
+            pos += Vector3.right * step;
         }
     
         transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
-        rb.velocity = Vector2.right * (horizontal * speed);
     }
 }
