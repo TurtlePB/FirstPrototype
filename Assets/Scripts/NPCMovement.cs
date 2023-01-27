@@ -103,6 +103,11 @@ public class NPCMovement : MonoBehaviour
                 if (Vector3.Distance(transform.position, listOfWaypointsBackwards[currentIndexOfWaypointsBackwards].position) < 0.001f)
                 {
                     currentIndexOfWaypointsBackwards++;
+                    
+                    // if (currentIndexOfWaypoint > listOfWaypoints.Count )
+                    // {
+                    //     currentIndexOfWaypoint = 0;
+                    // }
                 }
                 
                 if (currentIndexOfWaypoint < listOfWaypointsBackwards.Count)

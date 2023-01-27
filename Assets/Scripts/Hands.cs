@@ -74,6 +74,9 @@ public class Hands : MonoBehaviour
             _foodSpawner.existingBurger = false;
             _foodSpawner.existingSoda = false;
             _foodSpawner.existingPommes = false;
+            _foodSpawner.existingChicken = false;
+            _foodSpawner.existingDrink = false;
+            _foodSpawner.existingBeer = false;
             return;
         }
     }
