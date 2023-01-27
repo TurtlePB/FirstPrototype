@@ -8,9 +8,10 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 6f;
+    
+   [Range(0, 10)]
+   public float speed = 6f;
     private Vector3 pos;
-
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private float horizontal;

@@ -9,7 +9,8 @@ using Random = UnityEngine.Random;
 public class NPCMovement : MonoBehaviour
 {
     // private BoxCollider2D bc;
-    public float speed = 1f;
+    [Range(0, 10)]
+    public float speed = 3f;
     public List<Transform> listOfWaypoints;
     public List<Transform> listOfWaypointsBackwards;
     public SpriteRenderer sr;
@@ -72,38 +73,44 @@ public class NPCMovement : MonoBehaviour
         
     }
 
-    void TableLeaving()
-    {
-        if (foodFinished == true)
-        {
-            listOfWaypoints.Reverse();
-
-            if (Vector3.Distance(transform.position, listOfWaypoints[currentIndexOfWaypoint].position) < 0.001f)
-            {
-                currentIndexOfWaypoint++;
-            }
-            
-            
-            var move = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, listOfWaypoints[currentIndexOfWaypoint].position, move);
-        }
-    }
+    // void TableLeaving()
+    // {
+    //     if (foodFinished == true)
+    //     {
+    //         listOfWaypoints.Reverse();
+    //
+    //         if (Vector3.Distance(transform.position, listOfWaypoints[currentIndexOfWaypoint].position) < 0.001f)
+    //         {
+    //             currentIndexOfWaypoint++;
+    //         }
+    //         
+    //         
+    //         var move = speed * Time.deltaTime;
+    //         transform.position = Vector3.MoveTowards(transform.position, listOfWaypoints[currentIndexOfWaypoint].position, move);
+    //     }
+    // }
 
     void TableLeaving2()
     {
+        if (foodFinished == false) return;
+        
         if (foodFinished == true)
         {
+            if (isStillInBuilding == false) return;
+
             if (isStillInBuilding == true)
             {
                 if (Vector3.Distance(transform.position, listOfWaypointsBackwards[currentIndexOfWaypointsBackwards].position) < 0.001f)
                 {
                     currentIndexOfWaypointsBackwards++;
                 }
-
-                var move = speed * Time.deltaTime;
-                transform.position = Vector3.MoveTowards(transform.position, listOfWaypointsBackwards[currentIndexOfWaypointsBackwards].position, move);
-
-                if (currentIndexOfWaypoint > listOfWaypointsBackwards.Count)
+                
+                if (currentIndexOfWaypoint < listOfWaypointsBackwards.Count)
+                {
+                    var move = speed * Time.deltaTime;
+                    transform.position = Vector3.MoveTowards(transform.position, listOfWaypointsBackwards[currentIndexOfWaypointsBackwards].position, move);
+                }
+                else
                 {
                     isStillInBuilding = false;
                 }

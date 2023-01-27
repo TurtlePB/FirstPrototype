@@ -7,6 +7,10 @@ TagManager:
   - Chair
   - Burger
   - Soda
+  - Pommes
+  - Chicken
+  - Drink
+  - Beer
   layers:
   - Default
   - TransparentFX

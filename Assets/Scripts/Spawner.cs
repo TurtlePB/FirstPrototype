@@ -8,18 +8,30 @@ public class Spawner : MonoBehaviour
     public GameObject Burger;
     public GameObject Soda;
     public GameObject Pommes;
+    public GameObject Chicken;
+    public GameObject Drink;
+    public GameObject Beer;
     public bool existingBurger;
     public bool existingSoda;
     public bool existingPommes;
+    public bool existingChicken;
+    public bool existingDrink;
+    public bool existingBeer;
     public Transform SpawnpointBurger;
     public Transform SpawnpointSoda;
     public Transform SpawnpointPommes;
+    public Transform SpawnPointChicken;
+    public Transform SpawnpointDrink;
+    public Transform SpawnPointBeer;
     
     void Start()
     {
         existingBurger = false;
         existingSoda = false;
         existingPommes = false;
+        existingChicken = false;
+        existingDrink = false;
+        existingBeer = false;
     }
     
     void Update()
@@ -54,6 +66,33 @@ public class Spawner : MonoBehaviour
             newPommes.GetComponent<Pommes>().SetSpawner(this);
             newPommes.transform.SetParent(transform);
             existingPommes = true;
+        }
+
+        if (existingChicken == false)
+        {
+            GameObject newChicken = Instantiate(Chicken, SpawnPointChicken.position, quaternion.identity);
+            
+            newChicken.GetComponent<Chicken>().SetSpawner(this);
+            newChicken.transform.SetParent(transform);
+            existingChicken = true;
+        }
+
+        if (existingDrink == false)
+        {
+            GameObject newDrink = Instantiate(Drink, SpawnpointDrink.position, quaternion.identity);
+            
+            newDrink.GetComponent<Drink>().SetSpawner(this);
+            newDrink.transform.SetParent(transform);
+            existingDrink = true;
+        }
+
+        if (existingBeer == false)
+        {
+            GameObject newBeer = Instantiate(Beer, SpawnPointBeer.position, quaternion.identity);
+            
+            newBeer.GetComponent<Beer>().SetSpawner(this);
+            newBeer.transform.SetParent(transform);
+            existingBeer = true;
         }
     }
 

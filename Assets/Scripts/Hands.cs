@@ -14,7 +14,7 @@ public class Hands : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     public Transform parent;
-    private int maxItems;
+    public int maxItems;
     [SerializeField] private LayerMask foodLayer;
     private float timePressed;
     [SerializeField] private float CoolDown = 0.75f;
@@ -64,6 +64,7 @@ public class Hands : MonoBehaviour
     
     private void PickingFoodUp()
     {
+        // Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1f,1f), foodLayer);
         Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.5f, foodLayer);
         
         foreach (var f  in food)
@@ -79,6 +80,7 @@ public class Hands : MonoBehaviour
 
     public void DropFood()
     {
+        // Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1f,1f), foodLayer);
         Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 0.5f, foodLayer);
 
         foreach (var f in food)
@@ -119,6 +121,7 @@ public class Hands : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
+        // Gizmos.DrawWireCube(transform.position,new Vector3(1f,1f));
         Gizmos.DrawWireSphere(transform.position, 0.5f);
     }
 }
