@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class Hands : MonoBehaviour
 {
     private Spawner _foodSpawner;
+    private Table _table;
 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
@@ -32,6 +33,11 @@ public class Hands : MonoBehaviour
     {
         AdoptionAndAbandonment();
     }
+
+    public void maximalItems(Table tablePlacer)
+    {
+        _table = tablePlacer;
+    }
     
     public void AdoptionAndAbandonment()
     {
@@ -39,8 +45,9 @@ public class Hands : MonoBehaviour
         {
             if (maxItems < 2)
             {
-                PickingFoodUp();
-                maxItems++;
+                // PickingFoodUp();
+                // maxItems++;
+                PickingUpFoodConclusion();
             }
         }
 
@@ -50,8 +57,9 @@ public class Hands : MonoBehaviour
             
             if (timePressed <= 0)
             {
-                DropFood();
-                maxItems--;
+                // DropFood();
+                // maxItems--;
+                DropFoodConclusion();
                 timePressed = CoolDown;
             }
         }
@@ -60,6 +68,12 @@ public class Hands : MonoBehaviour
         {
             timePressed = CoolDown;
         }
+    }
+
+    private void PickingUpFoodConclusion()
+    {
+        PickingFoodUp();
+        maxItems++;
     }
     
     private void PickingFoodUp()
@@ -81,6 +95,12 @@ public class Hands : MonoBehaviour
         }
     }
 
+    private void DropFoodConclusion()
+    {
+        DropFood();
+        maxItems--;
+    }
+    
     public void DropFood()
     {
         // Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1f,1f), foodLayer);

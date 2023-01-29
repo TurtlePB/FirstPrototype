@@ -7772,6 +7772,8 @@ GameObject:
   - component: {fileID: 561885755}
   - component: {fileID: 561885754}
   - component: {fileID: 561885753}
+  - component: {fileID: 561885756}
+  - component: {fileID: 561885757}
   m_Layer: 0
   m_Name: TableRight
   m_TagString: Untagged
@@ -7806,8 +7808,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
   theTable: {fileID: 561885752}
   itemIsPlaced: 0
+  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -7873,6 +7879,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &561885756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561885751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  maxItems: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  CoolDown: 0.75
+--- !u!114 &561885757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561885751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyText: {fileID: 1216399945}
 --- !u!1 &591813944
 GameObject:
   m_ObjectHideFlags: 0
@@ -8486,6 +8524,156 @@ Transform:
   m_Father: {fileID: 1874415305}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &744097142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 744097143}
+  - component: {fileID: 744097146}
+  - component: {fileID: 744097145}
+  - component: {fileID: 744097144}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &744097143
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744097142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1390935141}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -27}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &744097144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744097142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb600dcd3a252a14c9e709cbf717fb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTimer: 0
+  dingstimer: {fileID: 744097145}
+--- !u!114 &744097145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744097142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &744097146
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744097142}
+  m_CullTransparentMesh: 1
 --- !u!1 &760999035
 GameObject:
   m_ObjectHideFlags: 0
@@ -9843,6 +10031,172 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1216399943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216399944}
+  - component: {fileID: 1216399946}
+  - component: {fileID: 1216399945}
+  - component: {fileID: 1216399947}
+  m_Layer: 5
+  m_Name: MoneyCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1216399944
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216399943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1390935141}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -101, y: -28}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1216399945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216399943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 2425
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 15
+  m_fontSizeBase: 15
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1216399946
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216399943}
+  m_CullTransparentMesh: 1
+--- !u!114 &1216399947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216399943}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
+  theTable: {fileID: 0}
+  itemIsPlaced: 0
+  giveMoney: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ListOfFoodStuff: []
+  _npcMovement: {fileID: 0}
+  eatingTime: 1
+  FoodWishBurger: {fileID: 0}
+  FoodWishSoda: {fileID: 0}
+  FoodWishPommes: {fileID: 0}
+  FoodWishChicken: {fileID: 0}
+  FoodWishDrink: {fileID: 0}
+  FoodWishBeer: {fileID: 0}
 --- !u!1 &1233409759
 GameObject:
   m_ObjectHideFlags: 0
@@ -9855,6 +10209,8 @@ GameObject:
   - component: {fileID: 1233409763}
   - component: {fileID: 1233409762}
   - component: {fileID: 1233409761}
+  - component: {fileID: 1233409764}
+  - component: {fileID: 1233409765}
   m_Layer: 0
   m_Name: TableRight
   m_TagString: Untagged
@@ -9889,8 +10245,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
   theTable: {fileID: 1233409760}
   itemIsPlaced: 0
+  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -9956,6 +10316,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1233409764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233409759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  maxItems: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  CoolDown: 0.75
+--- !u!114 &1233409765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233409759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyText: {fileID: 1216399945}
 --- !u!1 &1265395663
 GameObject:
   m_ObjectHideFlags: 0
@@ -10095,6 +10487,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 692488291}
+  - {fileID: 744097143}
+  - {fileID: 1216399944}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10441,6 +10835,8 @@ GameObject:
   - component: {fileID: 1629353990}
   - component: {fileID: 1629353989}
   - component: {fileID: 1629353988}
+  - component: {fileID: 1629353991}
+  - component: {fileID: 1629353992}
   m_Layer: 0
   m_Name: TableLeft
   m_TagString: Untagged
@@ -10475,8 +10871,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
   theTable: {fileID: 1629353987}
   itemIsPlaced: 0
+  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -10542,6 +10942,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1629353991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629353986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  maxItems: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  CoolDown: 0.75
+--- !u!114 &1629353992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629353986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyText: {fileID: 1216399945}
 --- !u!1 &1632618590
 GameObject:
   m_ObjectHideFlags: 0
@@ -10815,6 +11247,8 @@ GameObject:
   - component: {fileID: 1715731805}
   - component: {fileID: 1715731804}
   - component: {fileID: 1715731803}
+  - component: {fileID: 1715731806}
+  - component: {fileID: 1715731807}
   m_Layer: 0
   m_Name: TableLeft
   m_TagString: Untagged
@@ -10849,8 +11283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
   theTable: {fileID: 1715731802}
   itemIsPlaced: 0
+  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -10916,6 +11354,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1715731806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715731801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  maxItems: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  CoolDown: 0.75
+--- !u!114 &1715731807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715731801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyText: {fileID: 1216399945}
 --- !u!1 &1732322747
 GameObject:
   m_ObjectHideFlags: 0
@@ -10959,6 +11429,8 @@ GameObject:
   - component: {fileID: 1748280904}
   - component: {fileID: 1748280903}
   - component: {fileID: 1748280902}
+  - component: {fileID: 1748280905}
+  - component: {fileID: 1748280906}
   m_Layer: 0
   m_Name: TableRight
   m_TagString: Untagged
@@ -10993,8 +11465,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
   theTable: {fileID: 1748280901}
   itemIsPlaced: 0
+  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -11060,6 +11536,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1748280905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748280900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  maxItems: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  CoolDown: 0.75
+--- !u!114 &1748280906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748280900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyText: {fileID: 1216399945}
 --- !u!1 &1750768450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1157559501282308454, guid: 9cd2842120ec99b46b5eece982828abb, type: 3}
@@ -11300,6 +11808,8 @@ GameObject:
   - component: {fileID: 1887833745}
   - component: {fileID: 1887833744}
   - component: {fileID: 1887833743}
+  - component: {fileID: 1887833746}
+  - component: {fileID: 1887833747}
   m_Layer: 0
   m_Name: TableRight
   m_TagString: Untagged
@@ -11334,8 +11844,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
   theTable: {fileID: 1887833742}
   itemIsPlaced: 0
+  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -11401,6 +11915,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1887833746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887833741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  maxItems: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  CoolDown: 0.75
+--- !u!114 &1887833747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887833741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyText: {fileID: 1216399945}
 --- !u!1 &1898870532
 GameObject:
   m_ObjectHideFlags: 0
@@ -11413,6 +11959,8 @@ GameObject:
   - component: {fileID: 1898870536}
   - component: {fileID: 1898870535}
   - component: {fileID: 1898870534}
+  - component: {fileID: 1898870537}
+  - component: {fileID: 1898870538}
   m_Layer: 0
   m_Name: TableLeft
   m_TagString: Untagged
@@ -11447,8 +11995,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
   theTable: {fileID: 1898870533}
   itemIsPlaced: 0
+  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -11514,6 +12066,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1898870537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898870532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  maxItems: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  CoolDown: 0.75
+--- !u!114 &1898870538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898870532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyText: {fileID: 1216399945}
 --- !u!1 &1933032397
 GameObject:
   m_ObjectHideFlags: 0
@@ -12183,6 +12767,8 @@ GameObject:
   - component: {fileID: 2131326399}
   - component: {fileID: 2131326398}
   - component: {fileID: 2131326397}
+  - component: {fileID: 2131326400}
+  - component: {fileID: 2131326401}
   m_Layer: 0
   m_Name: TableLeft
   m_TagString: Untagged
@@ -12217,8 +12803,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hands: {fileID: 0}
+  money: 0
+  countTheMoney: {fileID: 1216399945}
   theTable: {fileID: 2131326396}
   itemIsPlaced: 0
+  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -12284,6 +12874,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2131326400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131326395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  maxItems: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  CoolDown: 0.75
+--- !u!114 &2131326401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131326395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyText: {fileID: 1216399945}
 --- !u!1 &2145020442
 GameObject:
   m_ObjectHideFlags: 0

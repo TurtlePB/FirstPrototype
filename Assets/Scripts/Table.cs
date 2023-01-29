@@ -5,10 +5,15 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using TMPro;
 
 public class Table : MonoBehaviour
 {
-    private Hands _hands;
+    public Hands _hands;
+    private MoneyCount _moneyCount;
+    public int money;
+    public TMP_Text countTheMoney;
+    
     
     private Rigidbody2D rb;
     private BoxCollider2D bc;
@@ -17,6 +22,7 @@ public class Table : MonoBehaviour
     private bool hasItem;
     public bool itemIsPlaced;
     private bool isInstantiated;
+    public int giveMoney;
     [SerializeField] private LayerMask foodLayer;
     [SerializeField] private List<GameObject> ListOfFoodStuff;
     public NPCMovement _npcMovement;
@@ -35,11 +41,15 @@ public class Table : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        _hands = GetComponent<Hands>();
+        _moneyCount = GetComponent<MoneyCount>();
         hasItem = true;
         itemIsPlaced = false;
         isWishing = false;
         eating = eatingTime;
         isInstantiated = false;
+        giveMoney = 0;
+        money = 0;
     }
 
     // Update is called once per frame
@@ -47,6 +57,8 @@ public class Table : MonoBehaviour
     {
         CustomerSatisfaction();
         FoodWishAttempt1();
+        countTheMoney.text = money.ToString();
+        // enoughMoney();
     }
     
     private void CustomerSatisfaction()
@@ -59,7 +71,6 @@ public class Table : MonoBehaviour
     
     private void PlaceOnTable()
     {
-        // new Vector2(1.75f,3f)
         Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
         // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
 
@@ -67,12 +78,20 @@ public class Table : MonoBehaviour
         {
             f.gameObject.transform.SetParent(theTable);
             f.transform.position = theTable.position;
-            // _hands.maxItems--;
+            _hands.maxItems--;
             itemIsPlaced = true;
             return;
         }
     }
 
+    private void enoughMoney()
+    {
+        if (money == 50)
+        {
+            print("you win");
+        }
+    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
@@ -123,7 +142,10 @@ public class Table : MonoBehaviour
                             {
                                 burger.gameObject.SetActive(false);
                                 print("yummy");
-                                
+                                // _moneyCount.money += 5;
+                                // print(_moneyCount.money);
+                                giveMoney += 5;
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -168,7 +190,10 @@ public class Table : MonoBehaviour
                             {
                                 soda.gameObject.SetActive(false);
                                 print("juicy");
-                                
+                                // _moneyCount.money += 5;
+                                // print(_moneyCount.money);
+                                giveMoney += 5;
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -203,7 +228,10 @@ public class Table : MonoBehaviour
                             {
                                 pommes.gameObject.SetActive(false);
                                 print("Tasty");
-                                
+                                // _moneyCount.money += 5;
+                                // print(_moneyCount.money);
+                                giveMoney += 5;
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -238,7 +266,10 @@ public class Table : MonoBehaviour
                             {
                                 chicken.gameObject.SetActive(false);
                                 print("Crispy");
-                                
+                                // _moneyCount.money += 5;
+                                // print(_moneyCount.money);
+                                giveMoney += 5;
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -273,7 +304,10 @@ public class Table : MonoBehaviour
                             {
                                 Drink.gameObject.SetActive(false);
                                 print("Delicious");
-                                
+                                // _moneyCount.money += 5;
+                                // print(_moneyCount.money);
+                                giveMoney += 5;
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -308,7 +342,10 @@ public class Table : MonoBehaviour
                             {
                                 beer.gameObject.SetActive(false);
                                 print("strong Beer");
-                                
+                                // _moneyCount.money += 5;
+                                // print(_moneyCount.money);
+                                giveMoney += 5;
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }

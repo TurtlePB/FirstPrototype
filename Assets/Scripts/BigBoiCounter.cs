@@ -21,6 +21,8 @@ public class BigBoiCounter : MonoBehaviour
         
     }
 
+    
+    
     private void ItemCount()
     {
 
@@ -28,7 +30,6 @@ public class BigBoiCounter : MonoBehaviour
         {
             existingItems++;
             itemText.text = "Item:" + existingItems;
-            // Destroy(tag.Insert(""));
         }
         
     }
