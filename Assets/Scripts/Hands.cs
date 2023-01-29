@@ -28,7 +28,7 @@ public class Hands : MonoBehaviour
         maxItems = 0;
         timePressed = CoolDown;
     }
-    
+     
     void Update()
     {
         AdoptionAndAbandonment();

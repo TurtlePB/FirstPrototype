@@ -7,6 +7,7 @@ public class MoneyCount : MonoBehaviour
 {
     private Table _table;
     public int money;
+    public int totalCount;
     public TMP_Text moneyText;
     void Start()
     {
@@ -17,12 +18,14 @@ public class MoneyCount : MonoBehaviour
     void Update()
     {
         // MoneyText.SetText(Money.ToString());
+        // converter();
         moneyText.text = money.ToString();
+        print(money);
         // moneyText.text = _table.giveMoney.ToString();
     }
 
     private void converter()
     {
-        // _table.giveMoney = money
+        _table.giveMoney = money;
     }
 }

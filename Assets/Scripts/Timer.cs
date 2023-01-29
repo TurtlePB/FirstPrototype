@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         levelTimer -= Time.deltaTime;
-        dingstimer.text = levelTimer.ToString("F1");
+        dingstimer.text = levelTimer.ToString("F0");
     }
     
     public void TimedOut()

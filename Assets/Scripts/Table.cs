@@ -11,7 +11,7 @@ public class Table : MonoBehaviour
 {
     public Hands _hands;
     private MoneyCount _moneyCount;
-    public int money;
+    public int money2;
     public TMP_Text countTheMoney;
     
     
@@ -49,7 +49,7 @@ public class Table : MonoBehaviour
         eating = eatingTime;
         isInstantiated = false;
         giveMoney = 0;
-        money = 0;
+        money2 = 0;
     }
 
     // Update is called once per frame
@@ -57,8 +57,9 @@ public class Table : MonoBehaviour
     {
         CustomerSatisfaction();
         FoodWishAttempt1();
-        countTheMoney.text = money.ToString();
+        countTheMoney.text = money2.ToString();
         // enoughMoney();
+        print(money2);
     }
     
     private void CustomerSatisfaction()
@@ -86,7 +87,7 @@ public class Table : MonoBehaviour
 
     private void enoughMoney()
     {
-        if (money == 50)
+        if (money2 == 50)
         {
             print("you win");
         }
@@ -142,10 +143,10 @@ public class Table : MonoBehaviour
                             {
                                 burger.gameObject.SetActive(false);
                                 print("yummy");
-                                // _moneyCount.money += 5;
+                                _moneyCount.money += 5;
                                 // print(_moneyCount.money);
                                 giveMoney += 5;
-                                money += 5;
+                                money2 += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -190,10 +191,10 @@ public class Table : MonoBehaviour
                             {
                                 soda.gameObject.SetActive(false);
                                 print("juicy");
-                                // _moneyCount.money += 5;
+                                _moneyCount.money += 5;
                                 // print(_moneyCount.money);
                                 giveMoney += 5;
-                                money += 5;
+                                money2 += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -228,10 +229,10 @@ public class Table : MonoBehaviour
                             {
                                 pommes.gameObject.SetActive(false);
                                 print("Tasty");
-                                // _moneyCount.money += 5;
+                                _moneyCount.money += 5;
                                 // print(_moneyCount.money);
                                 giveMoney += 5;
-                                money += 5;
+                                money2 += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -266,10 +267,10 @@ public class Table : MonoBehaviour
                             {
                                 chicken.gameObject.SetActive(false);
                                 print("Crispy");
-                                // _moneyCount.money += 5;
+                                _moneyCount.money += 5;
                                 // print(_moneyCount.money);
                                 giveMoney += 5;
-                                money += 5;
+                                money2 += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -304,10 +305,10 @@ public class Table : MonoBehaviour
                             {
                                 Drink.gameObject.SetActive(false);
                                 print("Delicious");
-                                // _moneyCount.money += 5;
+                                _moneyCount.money += 5;
                                 // print(_moneyCount.money);
                                 giveMoney += 5;
-                                money += 5;
+                                money2 += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -342,10 +343,10 @@ public class Table : MonoBehaviour
                             {
                                 beer.gameObject.SetActive(false);
                                 print("strong Beer");
-                                // _moneyCount.money += 5;
+                                _moneyCount.money += 5;
                                 // print(_moneyCount.money);
                                 giveMoney += 5;
-                                money += 5;
+                                money2 += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
