@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreenMoveOn : MonoBehaviour
 {
-    // public static LevelManager;
-    private float titleStreetTimer = 10;
+    public string sceneName;
+    private float titleStreetTimer = 1.5f;
     void Start()
     {
         
@@ -18,7 +18,7 @@ public class TitleScreenMoveOn : MonoBehaviour
         titleStreetTimer -= Time.deltaTime;
         if (titleStreetTimer <= 0)
         {
-            // SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
