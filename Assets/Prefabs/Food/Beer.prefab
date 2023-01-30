@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4331088146685666723}
   - component: {fileID: 6015465858772810650}
   - component: {fileID: 6839243967117806484}
+  - component: {fileID: 2068074723}
   m_Layer: 3
   m_Name: Beer
   m_TagString: Beer
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.093475774}
     oldSize: {x: 1.16, y: 1.16}
     newSize: {x: 1.16, y: 1.16}
     adaptiveTilingThreshold: 0.5
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.16, y: 1.16}
   m_EdgeRadius: 0
+--- !u!114 &2068074723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8952989412413645913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27e5fde3faf90c4d8277a98d9d08878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

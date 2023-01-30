@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7315677823480026628}
   - component: {fileID: 2715487500772557294}
   - component: {fileID: 2715487500772557292}
+  - component: {fileID: 1533502059}
   m_Layer: 3
   m_Name: Soda
   m_TagString: Soda
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3552084953071945663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.978, y: 1.3874, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8627012ff4bc8e340a3f7b6112ce63ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49006456, y: 0.10175529}
     oldSize: {x: 1.16, y: 1.16}
     newSize: {x: 1.16, y: 1.16}
     adaptiveTilingThreshold: 0.5
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1533502059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3552084953071945663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eae252ad6364504d83c5ba541b55fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
