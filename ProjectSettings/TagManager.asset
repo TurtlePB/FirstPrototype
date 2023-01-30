@@ -48,6 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: NPCLeft
+    uniqueID: 1741112517
+    locked: 0
   - name: Agent
     uniqueID: 2092115793
     locked: 0
