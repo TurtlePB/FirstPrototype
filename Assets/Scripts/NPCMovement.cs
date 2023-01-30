@@ -23,6 +23,8 @@ public class NPCMovement : MonoBehaviour
     public bool isSitting;
     public bool foodFinished;
     public bool isStillInBuilding;
+    private Vector2 movementNPC;
+    public Animator animator;
 
     void Start()
     {
@@ -63,12 +65,14 @@ public class NPCMovement : MonoBehaviour
 
         if (currentIndexOfWaypoint < listOfWaypoints.Count)
         {
-            var move = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, listOfWaypoints[currentIndexOfWaypoint].position, move);
+            // var move = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, listOfWaypoints[currentIndexOfWaypoint].position, speed * Time.deltaTime);
+            animator.SetBool("isWalking", true);
         }
         else
         {
             isSitting = true;
+            animator.SetBool("isSitting", true);
         }
         
     }
@@ -114,6 +118,8 @@ public class NPCMovement : MonoBehaviour
                 {
                     var move = speed * Time.deltaTime;
                     transform.position = Vector3.MoveTowards(transform.position, listOfWaypointsBackwards[currentIndexOfWaypointsBackwards].position, move);
+                    animator.SetBool("isSitting", false);
+                    animator.SetBool("isGoingHome", true);
                 }
                 else
                 {

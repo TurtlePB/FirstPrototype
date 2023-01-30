@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 2670514446879753135}
   - component: {fileID: 2670514446879753134}
   - component: {fileID: 2670514446879753133}
-  - component: {fileID: 2670514446879753168}
   - component: {fileID: 2670514446879753169}
   m_Layer: 0
   m_Name: TableLeft
@@ -126,12 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hands: {fileID: 0}
-  money: 0
-  countTheMoney: {fileID: 0}
+  itemTastetsGood: 0
   theTable: {fileID: 2670514446879753132}
   itemIsPlaced: 0
-  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -150,24 +146,6 @@ MonoBehaviour:
   FoodWishChicken: {fileID: 0}
   FoodWishDrink: {fileID: 0}
   FoodWishBeer: {fileID: 0}
---- !u!114 &2670514446879753168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2670514446879753131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 0}
-  maxItems: 0
-  foodLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  CoolDown: 0.75
 --- !u!114 &2670514446879753169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,8 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
-  moneyText: {fileID: 0}
 --- !u!1 &2670514447020361933
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +402,6 @@ GameObject:
   - component: {fileID: 2670514447643844851}
   - component: {fileID: 2670514447643844850}
   - component: {fileID: 2670514447643844849}
-  - component: {fileID: 2670514447643844852}
   - component: {fileID: 2670514447643844853}
   m_Layer: 0
   m_Name: TableRight
@@ -509,12 +484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hands: {fileID: 0}
-  money: 0
-  countTheMoney: {fileID: 0}
+  itemTastetsGood: 0
   theTable: {fileID: 2670514447643844848}
   itemIsPlaced: 0
-  giveMoney: 0
   foodLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -533,24 +505,6 @@ MonoBehaviour:
   FoodWishChicken: {fileID: 0}
   FoodWishDrink: {fileID: 0}
   FoodWishBeer: {fileID: 0}
---- !u!114 &2670514447643844852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2670514447643844815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741b0cbf8ba49234eb2cbd83d86abf22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 0}
-  maxItems: 0
-  foodLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  CoolDown: 0.75
 --- !u!114 &2670514447643844853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,8 +517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
-  moneyText: {fileID: 0}
 --- !u!1 &2670514447814800830
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +746,7 @@ BoxCollider2D:
   m_Offset: {x: 0.3, y: -0.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49999997, y: 0.5}
     oldSize: {x: 4.64, y: 2.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5

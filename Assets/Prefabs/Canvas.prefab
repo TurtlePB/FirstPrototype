@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 7335543633273187299}
   - component: {fileID: 7335543633273187297}
   - component: {fileID: 7335543633273187298}
-  - component: {fileID: 7335543633273187296}
   m_Layer: 5
   m_Name: MoneyCounter
   m_TagString: Untagged
@@ -239,36 +238,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7335543633273187296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7335543633273187308}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hands: {fileID: 0}
-  money: 0
-  countTheMoney: {fileID: 7335543633273187298}
-  theTable: {fileID: 0}
-  itemIsPlaced: 0
-  giveMoney: 0
-  foodLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  ListOfFoodStuff: []
-  _npcMovement: {fileID: 0}
-  eatingTime: 1
-  FoodWishBurger: {fileID: 0}
-  FoodWishSoda: {fileID: 0}
-  FoodWishPommes: {fileID: 0}
-  FoodWishChicken: {fileID: 0}
-  FoodWishDrink: {fileID: 0}
-  FoodWishBeer: {fileID: 0}
 --- !u!1 &7335543633740473565
 GameObject:
   m_ObjectHideFlags: 0

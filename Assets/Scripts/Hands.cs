@@ -34,10 +34,10 @@ public class Hands : MonoBehaviour
         AdoptionAndAbandonment();
     }
 
-    public void maximalItems(Table tablePlacer)
-    {
-        _table = tablePlacer;
-    }
+    // public void maximalItems(Table tablePlacer)
+    // {
+    //     _table = tablePlacer;
+    // } 
     
     public void AdoptionAndAbandonment()
     {
@@ -47,7 +47,7 @@ public class Hands : MonoBehaviour
             {
                 // PickingFoodUp();
                 // maxItems++;
-                PickingUpFoodConclusion();
+                PickingFoodUp();
             }
         }
 
@@ -58,8 +58,8 @@ public class Hands : MonoBehaviour
             if (timePressed <= 0)
             {
                 // DropFood();
-                // maxItems--;
-                DropFoodConclusion();
+                maxItems--;
+                DropFood();
                 timePressed = CoolDown;
             }
         }
@@ -70,11 +70,11 @@ public class Hands : MonoBehaviour
         }
     }
 
-    private void PickingUpFoodConclusion()
-    {
-        PickingFoodUp();
-        maxItems++;
-    }
+    // private void PickingUpFoodConclusion()
+    // {
+    //     PickingFoodUp();
+    //     maxItems++;
+    // }
     
     private void PickingFoodUp()
     {
@@ -91,15 +91,16 @@ public class Hands : MonoBehaviour
             _foodSpawner.existingChicken = false;
             _foodSpawner.existingDrink = false;
             _foodSpawner.existingBeer = false;
+            maxItems++;
             return;
         }
     }
 
-    private void DropFoodConclusion()
-    {
-        DropFood();
-        maxItems--;
-    }
+    // private void DropFoodConclusion()
+    // {
+    //     DropFood();
+    //     maxItems--;
+    // }
     
     public void DropFood()
     {
@@ -109,6 +110,7 @@ public class Hands : MonoBehaviour
         foreach (var f in food)
         {
             f.gameObject.transform.parent = null;
+            maxItems--;
             return;
         }
     }

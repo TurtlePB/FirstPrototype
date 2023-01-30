@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     public TMP_Text dingstimer;
     void Start()
     {
-        levelTimer = 200;
+        levelTimer = 180;
     }
 
     // Update is called once per frame
