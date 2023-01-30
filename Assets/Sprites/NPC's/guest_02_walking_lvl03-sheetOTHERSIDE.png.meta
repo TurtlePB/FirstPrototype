@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 181a6f08131d5694ba5a6063a0beb99e
+guid: 7a745e5b08a349345a2b118327d3808a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,52 +104,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_0
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_0
       rect:
         serializedVersion: 2
-        x: 75
-        y: 464
-        width: 81
-        height: 227
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d98fef15e063ed4f9bb398bf8178f6d
-      internalID: -1692876460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_1
-      rect:
-        serializedVersion: 2
-        x: 307
-        y: 465
-        width: 81
-        height: 226
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e59d429cb938de4083e90651e4de94f
-      internalID: -1474349648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_2
-      rect:
-        serializedVersion: 2
-        x: 539
+        x: 76
         y: 467
         width: 81
         height: 227
@@ -160,39 +118,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af37b1fe5aecb8f4fa73694615291b58
-      internalID: -2125249435
+      spriteID: 234930d4f3fd9d34f880fd43dd67bac7
+      internalID: 211818747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_3
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 232
-        width: 81
-        height: 227
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82be10d94203ae0408fbb9f22dd4b23d
-      internalID: -1393921954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_4
-      rect:
-        serializedVersion: 2
-        x: 307
-        y: 233
+        x: 308
+        y: 465
         width: 81
         height: 226
       alignment: 0
@@ -202,17 +139,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d315aa684cd9554da8856cd2e2b0c44
-      internalID: 1841908910
+      spriteID: 6826f0ad9f02cee45a858b28a7bd84b4
+      internalID: 1079795820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_5
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_2
       rect:
         serializedVersion: 2
-        x: 539
+        x: 540
+        y: 464
+        width: 81
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4660abdb1021f0440bfe7d6b9501b15f
+      internalID: 179057524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_3
+      rect:
+        serializedVersion: 2
+        x: 76
         y: 235
         width: 81
         height: 227
@@ -223,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 580d345688f5fe24cbf5c4383550c3d7
-      internalID: -1362138714
+      spriteID: d9c0f12700634184688d794cc797120e
+      internalID: -1396623557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_6
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_4
       rect:
         serializedVersion: 2
-        x: 70
-        y: 1
-        width: 67
-        height: 222
+        x: 308
+        y: 233
+        width: 81
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df566537d83c8544e94d32c7eca9569d
-      internalID: -369824932
+      spriteID: ae2cc97c190731643a17d83be651130e
+      internalID: -1673666550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_7
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_5
       rect:
         serializedVersion: 2
-        x: 302
-        y: 1
-        width: 67
-        height: 222
+        x: 540
+        y: 232
+        width: 81
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,17 +223,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1aa7c593ca2b1242a3318364fad1869
-      internalID: 522455737
+      spriteID: 78553515ffb976f4a8810467719b9666
+      internalID: -1683444143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_8
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_6
       rect:
         serializedVersion: 2
-        x: 534
+        x: 95
         y: 3
         width: 67
         height: 223
@@ -286,8 +244,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d26cd9002c8e7134fa44a26b19ff94d8
-      internalID: 81511345
+      spriteID: bd5440dce9bbeb447aeefeaad555a27d
+      internalID: 1597265535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_7
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1
+        width: 67
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae58ed7750e81e409238b118cb337d4
+      internalID: -774014690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guest_02_walking_lvl03-sheetOTHERSIDE_8
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 1
+        width: 67
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c832c738d593b4da2fc5f553ec734e
+      internalID: -1413259201
       vertices: []
       indices: 
       edges: []
@@ -303,15 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      guest_02_walking_lvl03-sheet_7: 522455737
-      guest_02_walking_lvl03-sheet_2: -2125249435
-      guest_02_walking_lvl03-sheet_5: -1362138714
-      guest_02_walking_lvl03-sheet_6: -369824932
-      guest_02_walking_lvl03-sheet_3: -1393921954
-      guest_02_walking_lvl03-sheet_8: 81511345
-      guest_02_walking_lvl03-sheet_1: -1474349648
-      guest_02_walking_lvl03-sheet_0: -1692876460
-      guest_02_walking_lvl03-sheet_4: 1841908910
+      guest_02_walking_lvl03-sheetOTHERSIDE_3: -1396623557
+      guest_02_walking_lvl03-sheetOTHERSIDE_8: -1413259201
+      guest_02_walking_lvl03-sheetOTHERSIDE_1: 1079795820
+      guest_02_walking_lvl03-sheetOTHERSIDE_2: 179057524
+      guest_02_walking_lvl03-sheetOTHERSIDE_7: -774014690
+      guest_02_walking_lvl03-sheetOTHERSIDE_5: -1683444143
+      guest_02_walking_lvl03-sheetOTHERSIDE_6: 1597265535
+      guest_02_walking_lvl03-sheetOTHERSIDE_4: -1673666550
+      guest_02_walking_lvl03-sheetOTHERSIDE_0: 211818747
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

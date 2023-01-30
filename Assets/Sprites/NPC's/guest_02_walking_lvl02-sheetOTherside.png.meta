@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 181a6f08131d5694ba5a6063a0beb99e
+guid: cf415ceccfd968b45ac0f0713de6682b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,34 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_0
+      name: guest_02_walking_lvl02-sheetOTherside_0
       rect:
         serializedVersion: 2
-        x: 75
-        y: 464
-        width: 81
-        height: 227
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d98fef15e063ed4f9bb398bf8178f6d
-      internalID: -1692876460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_1
-      rect:
-        serializedVersion: 2
-        x: 307
+        x: 76
         y: 465
-        width: 81
-        height: 226
+        width: 76
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,19 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e59d429cb938de4083e90651e4de94f
-      internalID: -1474349648
+      spriteID: 997b57961d8514e42952bee7341a578b
+      internalID: -113663139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_2
+      name: guest_02_walking_lvl02-sheetOTherside_1
       rect:
         serializedVersion: 2
-        x: 539
-        y: 467
-        width: 81
+        x: 308
+        y: 465
+        width: 76
         height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,19 +139,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af37b1fe5aecb8f4fa73694615291b58
-      internalID: -2125249435
+      spriteID: 4f1d118ca750f0c48b038d50b028be75
+      internalID: 489712173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_3
+      name: guest_02_walking_lvl02-sheetOTherside_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 232
-        width: 81
+        x: 540
+        y: 465
+        width: 76
         height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -181,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82be10d94203ae0408fbb9f22dd4b23d
-      internalID: -1393921954
+      spriteID: 41a4c42c921a36444ae77fb948cb5037
+      internalID: 18961549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_4
+      name: guest_02_walking_lvl02-sheetOTherside_3
       rect:
         serializedVersion: 2
-        x: 307
+        x: 76
         y: 233
-        width: 81
-        height: 226
+        width: 76
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,19 +181,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d315aa684cd9554da8856cd2e2b0c44
-      internalID: 1841908910
+      spriteID: 56ffeb97542dd4f4fa87e65360fb8482
+      internalID: 582085241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_5
+      name: guest_02_walking_lvl02-sheetOTherside_4
       rect:
         serializedVersion: 2
-        x: 539
-        y: 235
-        width: 81
+        x: 308
+        y: 233
+        width: 76
         height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -223,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 580d345688f5fe24cbf5c4383550c3d7
-      internalID: -1362138714
+      spriteID: 5895a192d299144419020a6bd667c360
+      internalID: 1249039076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_6
+      name: guest_02_walking_lvl02-sheetOTherside_5
       rect:
         serializedVersion: 2
-        x: 70
-        y: 1
-        width: 67
-        height: 222
+        x: 540
+        y: 233
+        width: 76
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df566537d83c8544e94d32c7eca9569d
-      internalID: -369824932
+      spriteID: e55c95688db40ca4f8a77dfc1cabd434
+      internalID: -2004420556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_7
+      name: guest_02_walking_lvl02-sheetOTherside_6
       rect:
         serializedVersion: 2
-        x: 302
-        y: 1
-        width: 67
-        height: 222
+        x: 91
+        y: 4
+        width: 46
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1aa7c593ca2b1242a3318364fad1869
-      internalID: 522455737
+      spriteID: e228853fb923300489856c82af80a418
+      internalID: -15539257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_02_walking_lvl03-sheet_8
+      name: guest_02_walking_lvl02-sheetOTherside_7
       rect:
         serializedVersion: 2
-        x: 534
-        y: 3
-        width: 67
-        height: 223
+        x: 308
+        y: 2
+        width: 80
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,8 +265,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d26cd9002c8e7134fa44a26b19ff94d8
-      internalID: 81511345
+      spriteID: 6fcc7ce044a20da4e84bd619fa994b21
+      internalID: -1705120285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guest_02_walking_lvl02-sheetOTherside_8
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 2
+        width: 79
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5ebe82edf9b7d4b8d393f436dedcf6
+      internalID: -913832658
       vertices: []
       indices: 
       edges: []
@@ -303,15 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      guest_02_walking_lvl03-sheet_7: 522455737
-      guest_02_walking_lvl03-sheet_2: -2125249435
-      guest_02_walking_lvl03-sheet_5: -1362138714
-      guest_02_walking_lvl03-sheet_6: -369824932
-      guest_02_walking_lvl03-sheet_3: -1393921954
-      guest_02_walking_lvl03-sheet_8: 81511345
-      guest_02_walking_lvl03-sheet_1: -1474349648
-      guest_02_walking_lvl03-sheet_0: -1692876460
-      guest_02_walking_lvl03-sheet_4: 1841908910
+      guest_02_walking_lvl02-sheetOTherside_4: 1249039076
+      guest_02_walking_lvl02-sheetOTherside_7: -1705120285
+      guest_02_walking_lvl02-sheetOTherside_2: 18961549
+      guest_02_walking_lvl02-sheetOTherside_1: 489712173
+      guest_02_walking_lvl02-sheetOTherside_3: 582085241
+      guest_02_walking_lvl02-sheetOTherside_5: -2004420556
+      guest_02_walking_lvl02-sheetOTherside_6: -15539257
+      guest_02_walking_lvl02-sheetOTherside_8: -913832658
+      guest_02_walking_lvl02-sheetOTherside_0: -113663139
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
