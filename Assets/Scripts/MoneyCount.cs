@@ -15,6 +15,6 @@ public class MoneyCount : MonoBehaviour
     
     void Update()
     {
-        _tmpro.text = _table.countedMoney.ToString();
+        // _tmpro.text = _table.countedMoney.ToString();
     }
 }

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,6 +69,30 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -78,7 +102,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 466
+        width: 216
+        height: 230
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86aec568cf1e642489603645bdd1ce10
+      internalID: 672781143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_1
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 466
+        width: 216
+        height: 228
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c0d85e43733194794b4fb71411e639
+      internalID: 1896895515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 466
+        width: 216
+        height: 228
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cae6ae7c299b549935700f161cb2eb
+      internalID: -425441482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 235
+        width: 216
+        height: 228
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7cabf310b56524583a5db8d6a1a403
+      internalID: -2084787991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_4
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 236
+        width: 216
+        height: 225
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc461f2839631d6439292a43e8cf5ac7
+      internalID: -2000785687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_5
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 236
+        width: 216
+        height: 225
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34713c26166831248bde3b39e6c7bff9
+      internalID: 1611341968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 195
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d13d3fdcbd84f41a50ad5cd3947445
+      internalID: -443446019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_7
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 195
+        height: 229
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d1fc12781f0e145aabbf616c98b1df
+      internalID: 1178584242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_lvl03_8
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 0
+        width: 195
+        height: 229
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7460aa4969938744d9608cece8f5b058
+      internalID: 94901802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +302,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      waiter_walking_sheet_lvl03_6: -443446019
+      waiter_walking_sheet_lvl03_1: 1896895515
+      waiter_walking_sheet_lvl03_7: 1178584242
+      waiter_walking_sheet_lvl03_5: 1611341968
+      waiter_walking_sheet_lvl03_3: -2084787991
+      waiter_walking_sheet_lvl03_8: 94901802
+      waiter_walking_sheet_lvl03_4: -2000785687
+      waiter_walking_sheet_lvl03_0: 672781143
+      waiter_walking_sheet_lvl03_2: -425441482
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
