@@ -118,6 +118,7 @@ public class NPCMovement : MonoBehaviour
                 else
                 {
                     isStillInBuilding = false;
+                    Destroy(this);
                 }
             }
         }

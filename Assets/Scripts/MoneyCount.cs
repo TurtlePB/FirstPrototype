@@ -11,6 +11,7 @@ public class MoneyCount : MonoBehaviour
     public TMP_Text moneyText;
     void Start()
     {
+        moneyText = GetComponent<TMP_Text>();
         money = 0;
     }
 

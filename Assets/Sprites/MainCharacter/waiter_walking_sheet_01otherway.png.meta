@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ffa2b3425ba9ab478dc3abc9a6a221c
+guid: bb25da0912a9f8f4c9deae6045c76655
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_0
+      name: waiter_walking_sheet_01otherway_0
       rect:
         serializedVersion: 2
-        x: 80
-        y: 465
-        width: 76
-        height: 222
+        x: 11
+        y: 467
+        width: 217
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c727e880fa5d662459778ca7052bd7c5
-      internalID: 2088264762
+      spriteID: 1b968690bed211e4c8dc59c28181c61a
+      internalID: 1818709746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_1
+      name: waiter_walking_sheet_01otherway_1
       rect:
         serializedVersion: 2
-        x: 308
-        y: 465
-        width: 76
-        height: 222
+        x: 240
+        y: 466
+        width: 217
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac1f58c7f0fc2e4e9db9a53fae76a8a
-      internalID: -2096244039
+      spriteID: ee42259858194d5448c0f7ebb491a668
+      internalID: -57477092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_2
+      name: waiter_walking_sheet_01otherway_2
       rect:
         serializedVersion: 2
-        x: 544
-        y: 465
-        width: 76
-        height: 225
+        x: 472
+        y: 464
+        width: 217
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59a9679eb5b62d0488d48805f4ddd17c
-      internalID: -2102996339
+      spriteID: fb3b76d45e3974d459a5f7258b8d9dbb
+      internalID: 312145399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_3
+      name: waiter_walking_sheet_01otherway_3
       rect:
         serializedVersion: 2
-        x: 80
+        x: 9
+        y: 236
+        width: 217
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e1133fe040c2c4a873e7d0d695d516
+      internalID: 418142848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_01otherway_4
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 234
+        width: 217
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961fcc1e2eb7ba445b369d2c58154b6f
+      internalID: 186391139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiter_walking_sheet_01otherway_5
+      rect:
+        serializedVersion: 2
+        x: 470
         y: 233
-        width: 76
-        height: 222
+        width: 217
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,113 +223,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d78a91ae0d2c5244b842ec9e33677b94
-      internalID: 16084309
+      spriteID: 12e0825fcbd270540935543bc51987c0
+      internalID: 18105141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_4
+      name: waiter_walking_sheet_01otherway_6
       rect:
         serializedVersion: 2
-        x: 312
-        y: 233
-        width: 76
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7
+        y: 0
+        width: 196
+        height: 231
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c116ea10c8b867240a8e211e530cfdd2
-      internalID: 1502272501
+      spriteID: 13be299c75b2115428b6bfc160df5c41
+      internalID: 150800806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_5
+      name: waiter_walking_sheet_01otherway_7
       rect:
         serializedVersion: 2
-        x: 544
-        y: 233
-        width: 76
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 252
+        y: 0
+        width: 196
+        height: 230
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32cbee764e1e33e43aac2604034afc91
-      internalID: 733721636
+      spriteID: 15ba526c8e0f6634abb1cde2f46591a0
+      internalID: 298859136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_6
+      name: waiter_walking_sheet_01otherway_8
       rect:
         serializedVersion: 2
-        x: 73
+        x: 483
         y: 1
-        width: 79
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 196
+        height: 231
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16667671fd9b2a546bde07915a9e7492
-      internalID: 964282921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_7
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 1
-        width: 80
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b558aa28335c75940a6dd906bfc9a429
-      internalID: 2019995159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guest_01_walking_lvl01-sheet_8
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 3
-        width: 45
-        height: 223
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04d19ea8c1edc7444897e5a7cd35a91e
-      internalID: -49706796
+      spriteID: 43c3cfcace312df478cf9e4ec00d9148
+      internalID: 2033987311
       vertices: []
       indices: 
       edges: []
@@ -303,15 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      guest_01_walking_lvl01-sheet_2: -2102996339
-      guest_01_walking_lvl01-sheet_3: 16084309
-      guest_01_walking_lvl01-sheet_1: -2096244039
-      guest_01_walking_lvl01-sheet_7: 2019995159
-      guest_01_walking_lvl01-sheet_8: -49706796
-      guest_01_walking_lvl01-sheet_6: 964282921
-      guest_01_walking_lvl01-sheet_0: 2088264762
-      guest_01_walking_lvl01-sheet_4: 1502272501
-      guest_01_walking_lvl01-sheet_5: 733721636
+      waiter_walking_sheet_01otherway_5: 18105141
+      waiter_walking_sheet_01otherway_8: 2033987311
+      waiter_walking_sheet_01otherway_3: 418142848
+      waiter_walking_sheet_01otherway_2: 312145399
+      waiter_walking_sheet_01otherway_7: 298859136
+      waiter_walking_sheet_01otherway_6: 150800806
+      waiter_walking_sheet_01otherway_4: 186391139
+      waiter_walking_sheet_01otherway_0: 1818709746
+      waiter_walking_sheet_01otherway_1: -57477092
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

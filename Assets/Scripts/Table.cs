@@ -13,6 +13,7 @@ public class Table : MonoBehaviour
     private MoneyCount _moneyCount;
     public int money2;
     public TMP_Text countTheMoney;
+    public bool itemTastetsGood;
     
     
     private Rigidbody2D rb;
@@ -50,6 +51,7 @@ public class Table : MonoBehaviour
         isInstantiated = false;
         giveMoney = 0;
         money2 = 0;
+        itemTastetsGood = false;
     }
 
     // Update is called once per frame
@@ -125,6 +127,11 @@ public class Table : MonoBehaviour
                 {
                     GameObject newBurgerWish = Instantiate(FoodWishBurger, transform.position, Quaternion.identity);
                     isInstantiated = true;
+
+                    if (itemTastetsGood)
+                    {
+                        newBurgerWish.gameObject.SetActive(false);
+                    }
                 }
 
                 if (itemIsPlaced)
@@ -141,6 +148,7 @@ public class Table : MonoBehaviour
                             // _hands.maxItems--;
                             if (eating < 0)
                             {
+                                itemTastetsGood = true;
                                 burger.gameObject.SetActive(false);
                                 print("yummy");
                                 _moneyCount.money += 5;
@@ -173,6 +181,15 @@ public class Table : MonoBehaviour
                 {
                     GameObject newSodaWish = Instantiate(FoodWishSoda, transform.position, quaternion.identity);
                     isInstantiated = true;
+                    
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    foreach (var soda in food)
+                    {
+                        if (soda.gameObject.CompareTag("Soda"))
+                        {
+                            newSodaWish.gameObject.SetActive(false);
+                        }
+                    }
                 }
 
                 if (itemIsPlaced)
@@ -211,6 +228,15 @@ public class Table : MonoBehaviour
                 {
                     GameObject newPommesWish = Instantiate(FoodWishPommes, transform.position, quaternion.identity);
                     isInstantiated = true;
+                    
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    foreach (var pommes in food)
+                    {
+                        if (pommes.gameObject.CompareTag("Pommes"))
+                        {
+                            newPommesWish.gameObject.SetActive(false);
+                        }
+                    }
                 }
 
                 if (itemIsPlaced)
@@ -249,6 +275,15 @@ public class Table : MonoBehaviour
                 {
                     GameObject newChickenWish = Instantiate(FoodWishChicken, transform.position, quaternion.identity);
                     isInstantiated = true;
+                    
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    foreach (var chicken in food)
+                    {
+                        if (chicken.gameObject.CompareTag("Chicken"))
+                        {
+                            newChickenWish.gameObject.SetActive(false);
+                        }
+                    }
                 }
 
                 if (itemIsPlaced)
@@ -287,6 +322,15 @@ public class Table : MonoBehaviour
                 {
                     GameObject newDrinkWish = Instantiate(FoodWishDrink, transform.position, quaternion.identity);
                     isInstantiated = true;
+                    
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    foreach (var Drink in food)
+                    {
+                        if (Drink.gameObject.CompareTag("Drink"))
+                        {
+                            newDrinkWish.SetActive(false);
+                        }
+                    }
                 }
 
                 if (itemIsPlaced)
@@ -325,6 +369,15 @@ public class Table : MonoBehaviour
                 {
                     GameObject newBeerWish = Instantiate(FoodWishBeer, transform.position, quaternion.identity);
                     isInstantiated = true;
+                    
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    foreach (var beer in food)
+                    {
+                        if (beer.gameObject.CompareTag("Beer"))
+                        {
+                            newBeerWish.gameObject.SetActive(false);
+                        }
+                    }
                 }
 
                 if (itemIsPlaced)
