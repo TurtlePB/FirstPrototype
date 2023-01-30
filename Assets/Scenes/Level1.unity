@@ -679,6 +679,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3037818072281976268, guid: a2fea24a2003382478b38bbad841681c, type: 3}
   m_PrefabInstance: {fileID: 3037818072031345530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &289486478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7335543633273187308, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
+  m_PrefabInstance: {fileID: 7335543634204336555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &297288038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8504748060854702591, guid: 6a7cd29e02ab1a0459ee870a21d73b63, type: 3}
@@ -3710,12 +3715,54 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7335543633273187298, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
   m_PrefabInstance: {fileID: 7335543634204336555}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 289486478}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1216399948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289486478}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tmpro: {fileID: 1216399945}
+--- !u!114 &1216399949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289486478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2bf38eeb4c5d04dbbad968360fdb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countTheMoney: {fileID: 1216399945}
+  itemTastetsGood: 0
+  money: 0
+  theTable: {fileID: 0}
+  itemIsPlaced: 0
+  foodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ListOfFoodStuff: []
+  _npcMovement: {fileID: 0}
+  eatingTime: 1
+  FoodWishBurger: {fileID: 0}
+  FoodWishSoda: {fileID: 0}
+  FoodWishPommes: {fileID: 0}
+  FoodWishChicken: {fileID: 0}
+  FoodWishDrink: {fileID: 0}
+  FoodWishBeer: {fileID: 0}
 --- !u!4 &1223173237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3037818073161189384, guid: a2fea24a2003382478b38bbad841681c, type: 3}
@@ -4447,9 +4494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
-  totalCount: 0
-  moneyText: {fileID: 1216399945}
+  _tmpro: {fileID: 0}
 --- !u!4 &1549060785
 Transform:
   m_ObjectHideFlags: 0

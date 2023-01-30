@@ -12,7 +12,8 @@ public class Table : MonoBehaviour
     private Hands _hands;
     public TMP_Text countTheMoney;
     public bool itemTastetsGood;
-    
+    private int money;
+    public int countedMoney;
     
     private Rigidbody2D rb;
     private BoxCollider2D bc;
@@ -46,12 +47,14 @@ public class Table : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         _hands = GetComponent<Hands>();
+        countTheMoney = GetComponent<TMP_Text>();
         hasItem = true;
         itemIsPlaced = false;
         isWishing = false;
         eating = eatingTime;
         isInstantiated = false;
         itemTastetsGood = false;
+        money = 0;
     }
 
     // Update is called once per frame
@@ -59,6 +62,9 @@ public class Table : MonoBehaviour
     {
         CustomerSatisfaction();
         FoodWishAttempt1();
+        countedMoney = money;
+        print(countedMoney);
+        // countTheMoney.text = countedMoney.ToString();
     }
     
     private void CustomerSatisfaction()
@@ -71,7 +77,7 @@ public class Table : MonoBehaviour
     
     private void PlaceOnTable()
     {
-        Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+        Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(2f,3f), 0, foodLayer);
         // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
 
         foreach (var f in food)
@@ -86,7 +92,7 @@ public class Table : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(transform.position, new Vector3(1.75f,3f));
+        Gizmos.DrawWireCube(transform.position, new Vector3(2f,3f));
         // Gizmos.DrawWireSphere(transform.position, 1.1f);
     }
     
@@ -112,7 +118,7 @@ public class Table : MonoBehaviour
 
                 if (itemIsPlaced)
                 {
-                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(2f,3f), 0, foodLayer);
                     // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
                     
                     foreach (var burger in food)
@@ -126,6 +132,7 @@ public class Table : MonoBehaviour
                                 itemTastetsGood = true;
                                 burger.gameObject.SetActive(false);
                                 print("yummy");
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -147,7 +154,7 @@ public class Table : MonoBehaviour
 
                 if (itemIsPlaced)
                 {
-                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(2f,3f), 0, foodLayer);
                     // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
                     
                     foreach (var soda in food)
@@ -160,6 +167,7 @@ public class Table : MonoBehaviour
                             {
                                 soda.gameObject.SetActive(false);
                                 print("juicy");
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -180,7 +188,7 @@ public class Table : MonoBehaviour
 
                 if (itemIsPlaced)
                 {
-                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(2f,3f), 0, foodLayer);
                     // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
                     
                     foreach (var pommes in food)
@@ -193,6 +201,7 @@ public class Table : MonoBehaviour
                             {
                                 pommes.gameObject.SetActive(false);
                                 print("Tasty");
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -213,7 +222,7 @@ public class Table : MonoBehaviour
 
                 if (itemIsPlaced)
                 {
-                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(2f,3f), 0, foodLayer);
                     // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
                     
                     foreach (var chicken in food)
@@ -226,6 +235,7 @@ public class Table : MonoBehaviour
                             {
                                 chicken.gameObject.SetActive(false);
                                 print("Crispy");
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -246,7 +256,7 @@ public class Table : MonoBehaviour
 
                 if (itemIsPlaced)
                 {
-                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(2f,3f), 0, foodLayer);
                     // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
                     
                     foreach (var Drink in food)
@@ -259,6 +269,7 @@ public class Table : MonoBehaviour
                             {
                                 Drink.gameObject.SetActive(false);
                                 print("Delicious");
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -279,7 +290,7 @@ public class Table : MonoBehaviour
 
                 if (itemIsPlaced)
                 {
-                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.75f,3f), 0, foodLayer);
+                    Collider2D[] food = Physics2D.OverlapBoxAll(transform.position, new Vector2(2f,3f), 0, foodLayer);
                     // Collider2D[] food = Physics2D.OverlapCircleAll(transform.position, 1.1f, foodLayer);
                     
                     foreach (var beer in food)
@@ -292,6 +303,7 @@ public class Table : MonoBehaviour
                             {
                                 beer.gameObject.SetActive(false);
                                 print("strong Beer");
+                                money += 5;
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
