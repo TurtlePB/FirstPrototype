@@ -1702,6 +1702,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 877454262}
     m_Modifications:
+    - target: {fileID: 518792877758795656, guid: 38c028cffb9fbdf4e91b75c8f26b7992, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9f9547b80ac13754d8100f6b268443b3, type: 2}
     - target: {fileID: 735937312566453375, guid: 38c028cffb9fbdf4e91b75c8f26b7992, type: 3}
       propertyPath: m_Name
       value: NPC (2)
@@ -1890,7 +1894,7 @@ PrefabInstance:
     - target: {fileID: 637353619300927354, guid: 26871abcc88d00149893a9c553227977, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26871abcc88d00149893a9c553227977, type: 3}
 --- !u!114 &649523530564788870 stripped
@@ -1919,7 +1923,7 @@ PrefabInstance:
     - target: {fileID: 1649834670, guid: 133c9bbd57e6afb4f966c3c5099f6a4e, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     - target: {fileID: 649523531640066464, guid: 133c9bbd57e6afb4f966c3c5099f6a4e, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -2040,7 +2044,7 @@ PrefabInstance:
     - target: {fileID: 1725762914, guid: 1e0e06c30b0e7ae4ba5886558b69117d, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     - target: {fileID: 1017235193724350869, guid: 1e0e06c30b0e7ae4ba5886558b69117d, type: 3}
       propertyPath: m_Name
       value: NPC(Blue)
@@ -2680,7 +2684,7 @@ PrefabInstance:
     - target: {fileID: 1710668907166575477, guid: 4b7d7dff971143e45ae1fd8b0d5dc7c0, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     - target: {fileID: 3917685502029037690, guid: 4b7d7dff971143e45ae1fd8b0d5dc7c0, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -2827,7 +2831,7 @@ PrefabInstance:
     - target: {fileID: 1981933211, guid: d52b44f5d7aac6c469cc76fe667875b4, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     - target: {fileID: 2442057638603684184, guid: d52b44f5d7aac6c469cc76fe667875b4, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -2933,6 +2937,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 877454262}
     m_Modifications:
+    - target: {fileID: 2540596992575885957, guid: 3cd6aedf9c15c9746b3a086db758a96c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9f9547b80ac13754d8100f6b268443b3, type: 2}
     - target: {fileID: 3334792141251789083, guid: 3cd6aedf9c15c9746b3a086db758a96c, type: 3}
       propertyPath: m_Name
       value: NPC (1)
@@ -3351,7 +3359,7 @@ PrefabInstance:
     - target: {fileID: 1213095687, guid: 865827a7c6cc8a442ba00611a36c3163, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: b770910aaee1be148bf7ef8ed041ac7c, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     - target: {fileID: 2970047866930943424, guid: 865827a7c6cc8a442ba00611a36c3163, type: 3}
       propertyPath: listOfWaypoints.Array.data[0]
       value: 
@@ -3871,6 +3879,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 877454262}
     m_Modifications:
+    - target: {fileID: 3058217171292864304, guid: 816683525dec5674c9f1a4f98ef05033, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 46e9c23494412724db88ad528dafe147, type: 2}
     - target: {fileID: 6662538112435680992, guid: 816683525dec5674c9f1a4f98ef05033, type: 3}
       propertyPath: listOfWaypoints.Array.data[0]
       value: 
@@ -4059,7 +4071,7 @@ PrefabInstance:
     - target: {fileID: 3243149865598815633, guid: a77bf43f0eb37c94597c85b03c726ba2, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77bf43f0eb37c94597c85b03c726ba2, type: 3}
 --- !u!1001 &3363571600768418444
@@ -4850,6 +4862,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 877454262}
     m_Modifications:
+    - target: {fileID: 2058044713, guid: 96f808232cc1d0b4094ae8a10251fa99, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 46e9c23494412724db88ad528dafe147, type: 2}
     - target: {fileID: 4941279077608893028, guid: 96f808232cc1d0b4094ae8a10251fa99, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5269,6 +5285,10 @@ PrefabInstance:
       propertyPath: listOfWaypointsBackwards.Array.data[4]
       value: 
       objectReference: {fileID: 825966594}
+    - target: {fileID: 5764249122699292682, guid: 9a12fefed6d98724a87b2bdf8214a0f9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 46e9c23494412724db88ad528dafe147, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a12fefed6d98724a87b2bdf8214a0f9, type: 3}
 --- !u!1001 &6015465858625760123
@@ -5533,6 +5553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC(Cyan) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6403803894934925124, guid: 487308f7c2082174b8b60d104ad4a746, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 46e9c23494412724db88ad528dafe147, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 487308f7c2082174b8b60d104ad4a746, type: 3}
 --- !u!1001 &6866051345127925698
@@ -5545,7 +5569,7 @@ PrefabInstance:
     - target: {fileID: 6866051346677271356, guid: 5bd71597b40467141998559771542baf, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     - target: {fileID: 9127374954721145212, guid: 5bd71597b40467141998559771542baf, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -5658,6 +5682,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 877454262}
     m_Modifications:
+    - target: {fileID: 1950486446, guid: c0cd31fa0741cf941bb54e106638ec99, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9f9547b80ac13754d8100f6b268443b3, type: 2}
     - target: {fileID: 938310344768918651, guid: c0cd31fa0741cf941bb54e106638ec99, type: 3}
       propertyPath: m_Name
       value: NPC
@@ -5777,7 +5805,7 @@ PrefabInstance:
     - target: {fileID: 7213941177378712826, guid: 199611a89ab722e478d0a3b7af188c9b, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     - target: {fileID: 7862866526740378342, guid: 199611a89ab722e478d0a3b7af188c9b, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -13763,6 +13791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (Red) (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7810505086197343196, guid: 063af27014fb897438d26e95bcb688f7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 46e9c23494412724db88ad528dafe147, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 063af27014fb897438d26e95bcb688f7, type: 3}
 --- !u!4 &7972253239294406843 stripped
@@ -13788,6 +13820,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 877454262}
     m_Modifications:
+    - target: {fileID: 1484470654, guid: 8381bdba6a28ac540919afa715b350da, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9f9547b80ac13754d8100f6b268443b3, type: 2}
     - target: {fileID: 7972253240602623976, guid: 8381bdba6a28ac540919afa715b350da, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -14052,6 +14088,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 877454262}
     m_Modifications:
+    - target: {fileID: 806509688, guid: 6a7cd29e02ab1a0459ee870a21d73b63, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 46e9c23494412724db88ad528dafe147, type: 2}
     - target: {fileID: 8504748060854702584, guid: 6a7cd29e02ab1a0459ee870a21d73b63, type: 3}
       propertyPath: listOfWaypoints.Array.data[0]
       value: 
@@ -14378,7 +14418,7 @@ PrefabInstance:
     - target: {fileID: 8787924861710501781, guid: f2bd8610029993d45a0bac0478b98e1f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1c995d4423e5d19418fc175f7d68e19e, type: 2}
+      objectReference: {fileID: 9100000, guid: da38018adf3bcee41aca04cfebe1d391, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2bd8610029993d45a0bac0478b98e1f, type: 3}
 --- !u!1001 &9031278186153141865
