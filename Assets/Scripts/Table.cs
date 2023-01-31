@@ -6,15 +6,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Table : MonoBehaviour
 {
     private Hands _hands;
-    public TMP_Text countTheMoney;
     public bool itemTastetsGood;
-    private int money;
-    public int countedMoney;
-    
+    public Timer _Timer;
+
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private SpriteRenderer sr;
@@ -47,14 +46,12 @@ public class Table : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         _hands = GetComponent<Hands>();
-        countTheMoney = GetComponent<TMP_Text>();
         hasItem = true;
         itemIsPlaced = false;
         isWishing = false;
         eating = eatingTime;
         isInstantiated = false;
         itemTastetsGood = false;
-        money = 0;
     }
 
     // Update is called once per frame
@@ -62,13 +59,6 @@ public class Table : MonoBehaviour
     {
         CustomerSatisfaction();
         FoodWishAttempt1();
-        countedMoney = money;
-        print(countedMoney);
-        // countTheMoney.text = countedMoney.ToString();
-        if (money >= 50)
-        {
-            
-        }
     }
     
     private void CustomerSatisfaction()
@@ -136,7 +126,7 @@ public class Table : MonoBehaviour
                                 itemTastetsGood = true;
                                 burger.gameObject.SetActive(false);
                                 print("yummy");
-                                money += 5;
+                                _Timer.AddMoney(5);
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -171,7 +161,7 @@ public class Table : MonoBehaviour
                             {
                                 soda.gameObject.SetActive(false);
                                 print("juicy");
-                                money += 5;
+                                _Timer.AddMoney(5);
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -205,7 +195,7 @@ public class Table : MonoBehaviour
                             {
                                 pommes.gameObject.SetActive(false);
                                 print("Tasty");
-                                money += 5;
+                                _Timer.AddMoney(5);
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -239,7 +229,7 @@ public class Table : MonoBehaviour
                             {
                                 chicken.gameObject.SetActive(false);
                                 print("Crispy");
-                                money += 5;
+                                _Timer.AddMoney(5);
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -273,7 +263,7 @@ public class Table : MonoBehaviour
                             {
                                 Drink.gameObject.SetActive(false);
                                 print("Delicious");
-                                money += 5;
+                                _Timer.AddMoney(5);
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
@@ -307,7 +297,7 @@ public class Table : MonoBehaviour
                             {
                                 beer.gameObject.SetActive(false);
                                 print("strong Beer");
-                                money += 5;
+                                _Timer.AddMoney(5);
                                 _npcMovement.foodFinished = true;
                                 _npcMovement.isStillInBuilding = true;
                             }
