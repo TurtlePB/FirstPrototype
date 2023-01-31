@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
     private int money;
     void Start()
     {
-        levelTimer = 30;
+        levelTimer = 120;
         money = 0;
     }
 
@@ -23,15 +23,20 @@ public class Timer : MonoBehaviour
     {
         levelTimer -= Time.deltaTime;
         dingstimer.text = levelTimer.ToString("F0");
-        if (levelTimer <= 0 && money == 5)
+        if (levelTimer <= 0 && money >= 50)
         {
             SceneManager.LoadScene(sceneName);
+        }
+
+        if (levelTimer <= 0 && money < 50)
+        {
+            SceneManager.LoadScene("LooseScene");
         }
     }
 
     public void AddMoney(int amount)
     {
         money += amount;
-        dingstimer.text = money.ToString();
+        // MouneyCounter.text = money.ToString();
     }
 }

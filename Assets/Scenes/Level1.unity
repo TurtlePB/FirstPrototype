@@ -1151,6 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9a3cb943d83f546aeec877473bb5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _table: {fileID: 0}
   _tmpro: {fileID: 0}
 --- !u!4 &1549060785
 Transform:
@@ -5902,6 +5903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7335543633273187298, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 7335543633376402883, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
       propertyPath: m_Camera
       value: 
@@ -5992,13 +5997,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7335543633740473555, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
       propertyPath: sceneName
-      value: Level2
+      value: WinScene1
       objectReference: {fileID: 0}
     - target: {fileID: 7335543633740473555, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
       propertyPath: MouneyCounter
       value: 
       objectReference: {fileID: 1216399945}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1216399948, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
 --- !u!1001 &7401956507730625064
 PrefabInstance:
