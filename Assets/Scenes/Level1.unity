@@ -227,6 +227,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2670514448675893635, guid: 272d7350b24725f49bf6d4a2d49aef25, type: 3}
   m_PrefabInstance: {fileID: 2670514448574739984}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &173801214 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7335543633740473554, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
+  m_PrefabInstance: {fileID: 7335543634204336555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &173801216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7335543633740473555, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
+  m_PrefabInstance: {fileID: 7335543634204336555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb600dcd3a252a14c9e709cbf717fb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &195978916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7335543633273187308, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
+  m_PrefabInstance: {fileID: 7335543634204336555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &260069636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4720606071802152618, guid: ccd766df6f9c6f346a0b8abb77bed389, type: 3}
@@ -868,12 +895,28 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7335543633273187298, guid: 53e7e0d06b97c0943a0ff2085ea089c1, type: 3}
   m_PrefabInstance: {fileID: 7335543634204336555}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 195978916}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1216399950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195978916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb600dcd3a252a14c9e709cbf717fb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTimer: 0
+  dingstimer: {fileID: 173801214}
+  MouneyCounter: {fileID: 1216399945}
+  sceneName: Level2
 --- !u!4 &1230132164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1602776863955942100, guid: c0cd31fa0741cf941bb54e106638ec99, type: 3}
@@ -2155,6 +2198,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232909204033909120, guid: 6c85179fcb937b943b4a809ceda77cbd, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 4232909204033909120, guid: 6c85179fcb937b943b4a809ceda77cbd, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -2210,6 +2257,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 4232909205373187263, guid: 6c85179fcb937b943b4a809ceda77cbd, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 4232909205373187263, guid: 6c85179fcb937b943b4a809ceda77cbd, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -2495,6 +2546,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3477386307687656906, guid: d37995dc322348441bdea50e8d1a2e18, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 3477386307687656906, guid: d37995dc322348441bdea50e8d1a2e18, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -2550,6 +2605,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 3477386308585426582, guid: d37995dc322348441bdea50e8d1a2e18, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 3477386308585426582, guid: d37995dc322348441bdea50e8d1a2e18, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -3081,6 +3140,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2670514446879753133, guid: 272d7350b24725f49bf6d4a2d49aef25, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 2670514446879753133, guid: 272d7350b24725f49bf6d4a2d49aef25, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -3136,6 +3199,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 2670514447643844849, guid: 272d7350b24725f49bf6d4a2d49aef25, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 2670514447643844849, guid: 272d7350b24725f49bf6d4a2d49aef25, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -3386,6 +3453,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1416185385}
     m_Modifications:
     - target: {fileID: 1723868720064066270, guid: 9aee6c22073ab0a4caece861386c96da, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 1723868720064066270, guid: 9aee6c22073ab0a4caece861386c96da, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -3441,6 +3512,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 1723868720340173909, guid: 9aee6c22073ab0a4caece861386c96da, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 1723868720340173909, guid: 9aee6c22073ab0a4caece861386c96da, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -3604,6 +3679,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3037818072553294147, guid: a2fea24a2003382478b38bbad841681c, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 3037818072553294147, guid: a2fea24a2003382478b38bbad841681c, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -3659,6 +3738,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 3037818073892441212, guid: a2fea24a2003382478b38bbad841681c, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 3037818073892441212, guid: a2fea24a2003382478b38bbad841681c, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -3994,6 +4077,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1416185385}
     m_Modifications:
     - target: {fileID: 838333847680333553, guid: 55aad2aafe10d29438a31b79dfb358b1, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 838333847680333553, guid: 55aad2aafe10d29438a31b79dfb358b1, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -4049,6 +4136,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 838333847989982637, guid: 55aad2aafe10d29438a31b79dfb358b1, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 838333847989982637, guid: 55aad2aafe10d29438a31b79dfb358b1, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -4172,6 +4263,10 @@ PrefabInstance:
       value: Table (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2270929568091838362, guid: 27331ba363e4e4647b17373f5d0ffa48, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 2270929568091838362, guid: 27331ba363e4e4647b17373f5d0ffa48, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -4227,6 +4322,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 2270929569439044261, guid: 27331ba363e4e4647b17373f5d0ffa48, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 2270929569439044261, guid: 27331ba363e4e4647b17373f5d0ffa48, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -4395,6 +4494,10 @@ PrefabInstance:
       value: Table (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4489535964318212996, guid: 06cc3806b0cf8874097ebc4b9c464135, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 4489535964318212996, guid: 06cc3806b0cf8874097ebc4b9c464135, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -4450,6 +4553,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 4489535964562904335, guid: 06cc3806b0cf8874097ebc4b9c464135, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 4489535964562904335, guid: 06cc3806b0cf8874097ebc4b9c464135, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -4610,6 +4717,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4720606072399018472, guid: ccd766df6f9c6f346a0b8abb77bed389, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 4720606072399018472, guid: ccd766df6f9c6f346a0b8abb77bed389, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -4665,6 +4776,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 4720606072494252789, guid: ccd766df6f9c6f346a0b8abb77bed389, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 4720606072494252789, guid: ccd766df6f9c6f346a0b8abb77bed389, type: 3}
       propertyPath: FoodWishBeer
       value: 
@@ -4937,6 +5052,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1416185385}
     m_Modifications:
     - target: {fileID: 603572385579911535, guid: 83077ca6596bb344b945e354d3f6e5f8, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
+    - target: {fileID: 603572385579911535, guid: 83077ca6596bb344b945e354d3f6e5f8, type: 3}
       propertyPath: FoodWishBeer
       value: 
       objectReference: {fileID: 867034213}
@@ -4992,6 +5111,10 @@ PrefabInstance:
       propertyPath: ListOfFoodStuff.Array.data[5]
       value: 
       objectReference: {fileID: 2068074720}
+    - target: {fileID: 603572385614828146, guid: 83077ca6596bb344b945e354d3f6e5f8, type: 3}
+      propertyPath: _Timer
+      value: 
+      objectReference: {fileID: 173801216}
     - target: {fileID: 603572385614828146, guid: 83077ca6596bb344b945e354d3f6e5f8, type: 3}
       propertyPath: FoodWishBeer
       value: 
