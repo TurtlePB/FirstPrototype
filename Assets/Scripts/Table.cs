@@ -65,6 +65,10 @@ public class Table : MonoBehaviour
         countedMoney = money;
         print(countedMoney);
         // countTheMoney.text = countedMoney.ToString();
+        if (money >= 50)
+        {
+            
+        }
     }
     
     private void CustomerSatisfaction()

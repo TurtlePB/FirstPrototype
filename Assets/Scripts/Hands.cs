@@ -15,7 +15,7 @@ public class Hands : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     public Transform parent;
-    public int maxItems;
+    public bool maxItems;
     [SerializeField] private LayerMask foodLayer;
     private float timePressed;
     [SerializeField] private float CoolDown = 0.75f;
@@ -25,7 +25,7 @@ public class Hands : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         _foodSpawner = FindObjectOfType<Spawner>();
-        maxItems = 0;
+        maxItems = false;
         timePressed = CoolDown;
     }
      
@@ -43,7 +43,7 @@ public class Hands : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            if (maxItems < 2)
+            if (maxItems == false)
             {
                 // PickingFoodUp();
                 // maxItems++;
@@ -51,14 +51,14 @@ public class Hands : MonoBehaviour
             }
         }
 
-        if (Input.GetKey("e") && maxItems > 0)
+        if (Input.GetKey("e") && maxItems == false)
         {
             timePressed -= Time.deltaTime;
             
             if (timePressed <= 0)
             {
                 // DropFood();
-                maxItems--;
+                //maxItems--;
                 DropFood();
                 timePressed = CoolDown;
             }
@@ -91,7 +91,7 @@ public class Hands : MonoBehaviour
             _foodSpawner.existingChicken = false;
             _foodSpawner.existingDrink = false;
             _foodSpawner.existingBeer = false;
-            maxItems++;
+            // maxItems++;
             return;
         }
     }
@@ -110,7 +110,7 @@ public class Hands : MonoBehaviour
         foreach (var f in food)
         {
             f.gameObject.transform.parent = null;
-            maxItems--;
+            // maxItems--;
             return;
         }
     }
