@@ -23,12 +23,12 @@ public class Timer : MonoBehaviour
     {
         levelTimer -= Time.deltaTime;
         dingstimer.text = levelTimer.ToString("F0");
-        if (levelTimer <= 0 && money >= 50)
+        if (levelTimer <= 0 && money >= 30)
         {
             SceneManager.LoadScene(sceneName);
         }
 
-        if (levelTimer <= 0 && money < 50)
+        if (levelTimer <= 0 && money <= 30)
         {
             SceneManager.LoadScene("LooseScene");
         }
@@ -37,6 +37,7 @@ public class Timer : MonoBehaviour
     public void AddMoney(int amount)
     {
         money += amount;
+        print(money);
         // MouneyCounter.text = money.ToString();
     }
 }
