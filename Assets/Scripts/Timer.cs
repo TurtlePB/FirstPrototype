@@ -12,9 +12,10 @@ public class Timer : MonoBehaviour
     private Table _table;
     public string sceneName;
     private int money;
+    // public SoundManager _SoundManager;
     void Start()
     {
-        levelTimer = 120;
+        levelTimer = 120f;
         money = 0;
     }
 
@@ -23,15 +24,20 @@ public class Timer : MonoBehaviour
     {
         levelTimer -= Time.deltaTime;
         dingstimer.text = levelTimer.ToString("F0");
-        if (levelTimer <= 0 && money >= 30)
+        if (levelTimer <= 0f && money >= 30)
         {
             SceneManager.LoadScene(sceneName);
         }
 
-        if (levelTimer <= 0 && money <= 30)
+        if (levelTimer <= 0f && money <= 30)
         {
             SceneManager.LoadScene("LooseScene");
         }
+
+        // if (levelTimer <= 20f)
+        // {
+        //     _SoundManager.
+        // }
     }
 
     public void AddMoney(int amount)
