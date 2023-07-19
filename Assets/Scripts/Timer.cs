@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
@@ -13,8 +14,11 @@ public class Timer : MonoBehaviour
     public string sceneName;
     private int money;
     // public SoundManager _SoundManager;
+    // // public AudioSource _AudioSource;
+    // [SerializeField] private AudioClip _clip;
     void Start()
     {
+        // _AudioSource = GetComponent<AudioSource>();
         levelTimer = 120f;
         money = 0;
     }
@@ -34,9 +38,9 @@ public class Timer : MonoBehaviour
             SceneManager.LoadScene("LooseScene");
         }
 
-        // if (levelTimer <= 20f)
+        // if (levelTimer <= 20)
         // {
-        //     _SoundManager.
+        //     SoundManager.Instance.PlaySound(_clip);
         // }
     }
 
